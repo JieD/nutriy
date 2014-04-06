@@ -1,0 +1,17 @@
+Log File 
+
+3/1  UI & functionality design
+3/5  design documents
+3/6  finish design document and create Google Code page
+3/16 HomePageActivity
+3/17 refine activity_home_page.xml:choose color and fonts
+3/18 refind activity_home_page.xml:rounded button shape, layout divider
+3/19 refind activity_home_page.xml:layout - learn details about listView
+3/20 refind activity_home_page.xml:layout - use one RelativeLayout insteandof layered LayoutManagers, refine layout.
+3/23 finish refining activity_home_page.xml
+3/25 USDA database usage
+3/27 USDA abbreviated db text file parsing
+3/29 learn concept of DB and sqlite
+4/3  learn to parse text file in a clean way
+     learn to use sqlite DB and ContentProvider
+4/5  finish AddEntryActivity
