@@ -14,5 +14,9 @@ Log File
 3/29 learn concept of DB and sqlite
 4/3  learn to parse text file in a clean way
      learn to use sqlite DB and ContentProvider
-4/5  finish AddEntryActivity
-4/6
+4/5  finish AddEntryActivity & activity_add_entry.xml
+4/6  fix issue with Google Code 
+     build skeleton of reading and writing file in an efficient way
+4/7  familiar with raw USDA data file format
+     choose necessary data fields for my app
+     clean raw file: remove db ID and delimiters
