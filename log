@@ -20,3 +20,13 @@ Log File
 4/7  familiar with raw USDA data file format
      choose necessary data fields for my app
      clean raw file: remove db ID and delimiters
+4/8  create DataHelper project for managing db
+     read raw file ABBREV.txt and write to nutrition_db.txt which extracts the
+     necessary fields and serving unit    
+4/9  improve color combination RGB, consolidate dimension values so that no hard     value is used in layout file
+     change font size to better match the screen
+     add fake views for better layout
+     finish NutritionTableFragment and fragment_nutrition_table.xml
+     manage to dynamically change the text of TextView in the fragment
+4/10 presentation preparation: slides & talk
+     enable clickable views in AddEntryActivity
