@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
+<fullyQualifiedTypeName name="android.support.v4.widget.DrawerLayout"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.R.array"/>
+<fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.R.id"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.R.color"/>
+<fullyQualifiedTypeName name="android.support.v4.app.ActionBarDrawerToggle"/>
+</qualifiedTypeNameHistroy>

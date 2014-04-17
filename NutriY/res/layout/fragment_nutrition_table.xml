@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nutrition_table"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="@color/low_light_gray" >
+    
+    <TableRow 
+        android:layout_width="match_parent" 
+        android:minHeight="@dimen/medium_entry_height"
+        android:background="@color/light_blue">        
+        <TextView android:layout_weight="2" />
+        <TextView 
+            android:layout_weight="1" android:text="@string/total" 
+            android:textSize="@dimen/small_text_size" android:textStyle="bold" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:layout_weight="1" android:text="@string/goal"  
+            android:textSize="@dimen/small_text_size" android:textStyle="bold" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:layout_weight="1" android:text="@string/left"  
+            android:textSize="@dimen/small_text_size" android:textStyle="bold" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/fat_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">       
+        <TextView  
+            android:layout_weight="2" android:text="@string/total_fat" 
+            android:textSize="@dimen/small_text_size" android:textStyle="bold"
+            android:paddingLeft="@dimen/small_padding" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/fat_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/fat_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/fat_left"
+            android:layout_weight="1" android:text="@string/default_number"
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/saturated_fat_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
+        android:background="@color/mid_light_gray">        
+        <TextView android:layout_weight="2" android:text="@string/saturated_fat" 
+            android:textSize="@dimen/small_text_size" 
+            android:paddingLeft="@dimen/extra_large_padding" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/saturated_fat_total"
+            android:layout_weight="1" android:text="@string/default_number"
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/saturated_fat_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/saturated_fat_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/trans_fat_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
+        
+        <TextView android:layout_weight="2" android:text="@string/trans_fat" 
+            android:textSize="@dimen/small_text_size"
+            android:paddingLeft="@dimen/extra_large_padding" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/trans_fat_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/trans_fat_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/trans_fat_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/cholesterol_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
+        android:background="@color/mid_light_gray">
+        
+        <TextView 
+            android:layout_weight="2" android:text="@string/cholesterol" 
+            android:textSize="@dimen/small_text_size"  android:textStyle="bold"
+            android:paddingLeft="@dimen/small_padding" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/cholesterol_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/cholesterol_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/cholesterol_left"
+            android:layout_weight="1" android:text="@string/default_number"
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/sodium_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
+        
+        <TextView 
+            android:layout_weight="2" android:text="@string/sodium" 
+            android:textSize="@dimen/small_text_size" android:textStyle="bold"
+            android:paddingLeft="@dimen/small_padding"
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/sodium_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/sodium_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/sodium_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/potassium_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
+        android:background="@color/mid_light_gray">
+        
+        <TextView 
+            android:layout_weight="2" android:text="@string/potassium" 
+            android:textSize="@dimen/small_text_size"  android:textStyle="bold"
+            android:paddingLeft="@dimen/small_padding"
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/potassium_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/potassium_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/potassium_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/carbs_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
+        
+        <TextView 
+            android:layout_weight="2" android:text="@string/total_carbs" 
+            android:textSize="@dimen/small_text_size"  android:textStyle="bold"
+            android:paddingLeft="@dimen/small_padding"
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/carbs_total"
+            android:layout_weight="1" android:text="@string/default_number"
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/carbs_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/carbs_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/fiber_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
+        android:background="@color/mid_light_gray">
+        
+        <TextView android:layout_weight="2" android:text="@string/fiber" 
+            android:textSize="@dimen/small_text_size" 
+            android:paddingLeft="@dimen/extra_large_padding"
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/fiber_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/fiber_goal"
+            android:layout_weight="1"  
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/fiber_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/sugar_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
+        
+        <TextView android:layout_weight="2" android:text="@string/sugar" 
+            android:textSize="@dimen/small_text_size" 
+            android:paddingLeft="@dimen/extra_large_padding"
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/sugar_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/sugar_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/sugar_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/protein_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
+        android:background="@color/mid_light_gray">
+        
+        <TextView 
+            android:layout_weight="2" android:text="@string/protein" 
+            android:textSize="@dimen/small_text_size"  android:textStyle="bold"
+            android:paddingLeft="@dimen/small_padding"
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/protein_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView            
+            android:id="@+id/protein_goal"
+            android:layout_weight="1"  
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/protein_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/vit_A_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
+        
+        <TextView 
+            android:layout_weight="2" android:text="@string/vit_A" 
+            android:textSize="@dimen/small_text_size"  android:textStyle="bold"
+            android:paddingLeft="@dimen/small_padding"
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/vit_A_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/vit_A_goal"
+            android:layout_weight="1"  
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/vit_A_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/vit_C_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
+        android:background="@color/mid_light_gray">
+        
+        <TextView 
+            android:layout_weight="2" android:text="@string/vit_C" 
+            android:textSize="@dimen/small_text_size"  android:textStyle="bold"
+            android:paddingLeft="@dimen/small_padding"
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/vit_C_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/vit_C_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/vit_C_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/calcium_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
+        
+        <TextView 
+            android:layout_weight="2" android:text="@string/calcium" 
+            android:textSize="@dimen/small_text_size"  android:textStyle="bold"
+            android:paddingLeft="@dimen/small_padding"
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/calcium_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/calcium_goal"
+            android:layout_weight="1"  
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/calcium_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <TableRow 
+        android:id="@+id/iron_table"
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
+        android:background="@color/mid_light_gray">
+        
+        <TextView 
+            android:layout_weight="2" android:text="@string/iron" 
+            android:textSize="@dimen/small_text_size"  android:textStyle="bold"
+            android:paddingLeft="@dimen/small_padding"
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/iron_total"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/iron_goal"
+            android:layout_weight="1"  
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/iron_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+</TableLayout>
+
