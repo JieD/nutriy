@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="PieChart">
-       <attr name="showChart" format="boolean" />
-       <attr name="pieRadius" format="dimension" />
-       <attr name="dividerWidth" format="dimension" />
-   </declare-styleable>
-</resources>
