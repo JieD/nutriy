@@ -8,23 +8,18 @@
     <string name="calories_remaining_number">1200</string>
     <string name="calories_remaining">CALORIES REMAINING</string>
     <string name="add_to_diary">Add to Diary</string>
-    
     <string name="goal_calorie_number">1200</string>
     <string name="food_calorie_number">+ 0</string>
     <string name="exercise_calorie_number">- 0</string>
     <string name="net_calorie_number">0</string>
-    
     <string name="uc_goal">GOAL</string>
     <string name="food">FOOD</string>
     <string name="exercise">EXERCISE</string>
     <string name="net">NET</string>
-    
     <string name="goal">Goal</string>
     <string name="total">Total</string>
     <string name="left">Left</string>
-    
     <string name="daily_summary">DAILY SUMMARY</string>
-    
     <string name="total_fat">Total Fat (g)</string>
     <string name="saturated_fat">Saturated (g)</string>
     <string name="trans_fat">Trans (g)</string>
@@ -39,13 +34,10 @@
     <string name="vit_C">Vitamin C</string>
     <string name="calcium">Calcium</string>
     <string name="iron">Iron</string>
-    
     <string name="default_number">0</string>
-    
     <string name="meals">MEALS</string>
     <string name="water_upcase">WATER</string>
     <string name="notes">NOTES</string>
-    
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
     <string name="dinner">Dinner</string>
@@ -55,7 +47,7 @@
     <string name="water">Water</string>
     <string name="food_notes">Food Notes</string>
     <string name="exercise_notes">Exercise Notes</string>
-    
+
     <string-array name="navigations_array">
         <item>Home</item>
         <item>Diary</item>
@@ -64,5 +56,13 @@
         <item>Goals</item>
         <item>Settings</item>
     </string-array>
+
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="title_activity_nutrition_page">NutritionPageActivity</string>
+
+    <string name="calorie_breakdown">CALORIE BREAKDOWN</string>
     
+    
+
 </resources>

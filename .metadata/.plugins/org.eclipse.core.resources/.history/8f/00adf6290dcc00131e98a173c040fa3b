@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/sfsu.csc780.jied.nutriy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	 <sfsu.csc780.jied.nutriy.PieChart
+	     android:id="@+id/pie_chart"
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_centerHorizontal="true"
+	     custom:showChart="true" 
+	     custom:pieRadius="75dp"
+	     custom:dividerWidth="1do"
+	     custom:emptyPieColor="@color/empty_pie_blue" 
+	     custom:carbPieColor="@color/my_blue"
+	     custom:fatPieColor="@android:color/red"
+	     custom:proteinPieColor="@android:color/green"/>
+ 
+</RelativeLayout>

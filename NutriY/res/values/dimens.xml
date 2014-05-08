@@ -24,4 +24,6 @@
     <dimen name="medium_entry_height">30dp</dimen>
     <dimen name="small_entry_height">25dp</dimen>
     <dimen name="table_entry_height">20dp</dimen>
+    
+    <dimen name="drawer_width">240dp</dimen>
 </resources>

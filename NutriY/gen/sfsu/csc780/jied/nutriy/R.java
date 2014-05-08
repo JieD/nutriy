@@ -12,18 +12,125 @@ public final class R {
         public static final int navigations_array=0x7f070000;
     }
     public static final class attr {
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int carbPercentage=0x7f010008;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int carbPieColor=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int dividerWidth=0x7f010002;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int emptyPieColor=0x7f010004;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fatPercentage=0x7f010009;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fatPieColor=0x7f010006;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pieRadius=0x7f010001;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int proteinPercentage=0x7f01000a;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int proteinPieColor=0x7f010007;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int showChart=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textColor=0x7f010003;
     }
     public static final class color {
-        public static final int light_blue=0x7f040003;
-        public static final int low_light_gray=0x7f040004;
-        public static final int mid_light_gray=0x7f040005;
-        public static final int my_blue=0x7f040002;
+        public static final int empty_pie_blue=0x7f040008;
+        public static final int light_blue=0x7f040004;
+        public static final int low_light_gray=0x7f040005;
+        public static final int mid_light_gray=0x7f040006;
+        public static final int my_blue=0x7f040003;
         public static final int my_green=0x7f040001;
-        public static final int text_gray=0x7f040006;
+        public static final int my_red=0x7f040002;
+        public static final int pie_blue=0x7f040009;
+        public static final int pie_green=0x7f04000b;
+        public static final int pie_red=0x7f04000a;
+        public static final int text_gray=0x7f040007;
         public static final int white=0x7f040000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
+
+         Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
+    
 
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
@@ -31,6 +138,7 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int drawer_width=0x7f050014;
         public static final int extra_large_padding=0x7f050007;
         public static final int extra_large_text_size=0x7f05000e;
         public static final int extra_small_text_size=0x7f050009;
@@ -56,92 +164,99 @@ public final class R {
         public static final int ic_action_discard=0x7f020002;
         public static final int ic_action_edit=0x7f020003;
         public static final int ic_action_new=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int list_divider=0x7f020006;
-        public static final int table_divider=0x7f020007;
+        public static final int ic_drawer=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int list_divider=0x7f020007;
+        public static final int table_divider=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0046;
+        public static final int action_settings=0x7f0a0049;
         public static final int add_to_diary=0x7f0a0006;
         public static final int button_bottom_gap=0x7f0a0005;
-        public static final int calcium_goal=0x7f0a003f;
-        public static final int calcium_left=0x7f0a0040;
-        public static final int calcium_table=0x7f0a003d;
-        public static final int calcium_total=0x7f0a003e;
+        public static final int calcium_goal=0x7f0a0042;
+        public static final int calcium_left=0x7f0a0043;
+        public static final int calcium_table=0x7f0a0040;
+        public static final int calcium_total=0x7f0a0041;
         public static final int calorie_break_down=0x7f0a0008;
         public static final int calories_remaining=0x7f0a0003;
         public static final int calories_remaining_number=0x7f0a0002;
-        public static final int carbs_goal=0x7f0a0027;
-        public static final int carbs_left=0x7f0a0028;
-        public static final int carbs_table=0x7f0a0025;
-        public static final int carbs_total=0x7f0a0026;
+        public static final int carbs_goal=0x7f0a002a;
+        public static final int carbs_left=0x7f0a002b;
+        public static final int carbs_table=0x7f0a0028;
+        public static final int carbs_total=0x7f0a0029;
         public static final int center_fake_view=0x7f0a0004;
-        public static final int cholesterol_goal=0x7f0a001b;
-        public static final int cholesterol_left=0x7f0a001c;
-        public static final int cholesterol_table=0x7f0a0019;
-        public static final int cholesterol_total=0x7f0a001a;
+        public static final int cholesterol_goal=0x7f0a001e;
+        public static final int cholesterol_left=0x7f0a001f;
+        public static final int cholesterol_table=0x7f0a001c;
+        public static final int cholesterol_total=0x7f0a001d;
         public static final int date=0x7f0a0000;
         public static final int drawer_layout=0x7f0a0001;
-        public static final int fat_goal=0x7f0a000f;
-        public static final int fat_left=0x7f0a0010;
-        public static final int fat_table=0x7f0a000d;
-        public static final int fat_total=0x7f0a000e;
-        public static final int fiber_goal=0x7f0a002b;
-        public static final int fiber_left=0x7f0a002c;
-        public static final int fiber_table=0x7f0a0029;
-        public static final int fiber_total=0x7f0a002a;
+        public static final int fat_goal=0x7f0a0012;
+        public static final int fat_left=0x7f0a0013;
+        public static final int fat_table=0x7f0a0010;
+        public static final int fat_total=0x7f0a0011;
+        public static final int fiber_goal=0x7f0a002e;
+        public static final int fiber_left=0x7f0a002f;
+        public static final int fiber_table=0x7f0a002c;
+        public static final int fiber_total=0x7f0a002d;
         public static final int gap_view=0x7f0a0007;
-        public static final int iron_goal=0x7f0a0043;
-        public static final int iron_left=0x7f0a0044;
-        public static final int iron_table=0x7f0a0041;
-        public static final int iron_total=0x7f0a0042;
+        public static final int iron_goal=0x7f0a0046;
+        public static final int iron_left=0x7f0a0047;
+        public static final int iron_table=0x7f0a0044;
+        public static final int iron_total=0x7f0a0045;
         public static final int left_drawer=0x7f0a000b;
-        public static final int list_item=0x7f0a0045;
+        public static final int list_item=0x7f0a0048;
+        public static final int menu=0x7f0a000c;
+        public static final int nutritionChartFragment=0x7f0a000d;
         public static final int nutritionTableFragment=0x7f0a000a;
-        public static final int nutrition_table=0x7f0a000c;
-        public static final int potassium_goal=0x7f0a0023;
-        public static final int potassium_left=0x7f0a0024;
-        public static final int potassium_table=0x7f0a0021;
-        public static final int potassium_total=0x7f0a0022;
-        public static final int protein_goal=0x7f0a0033;
-        public static final int protein_left=0x7f0a0034;
-        public static final int protein_table=0x7f0a0031;
-        public static final int protein_total=0x7f0a0032;
-        public static final int saturated_fat_goal=0x7f0a0013;
-        public static final int saturated_fat_left=0x7f0a0014;
-        public static final int saturated_fat_table=0x7f0a0011;
-        public static final int saturated_fat_total=0x7f0a0012;
-        public static final int sodium_goal=0x7f0a001f;
-        public static final int sodium_left=0x7f0a0020;
-        public static final int sodium_table=0x7f0a001d;
-        public static final int sodium_total=0x7f0a001e;
-        public static final int sugar_goal=0x7f0a002f;
-        public static final int sugar_left=0x7f0a0030;
-        public static final int sugar_table=0x7f0a002d;
-        public static final int sugar_total=0x7f0a002e;
+        public static final int nutrition_table=0x7f0a000f;
+        public static final int pie=0x7f0a000e;
+        public static final int potassium_goal=0x7f0a0026;
+        public static final int potassium_left=0x7f0a0027;
+        public static final int potassium_table=0x7f0a0024;
+        public static final int potassium_total=0x7f0a0025;
+        public static final int protein_goal=0x7f0a0036;
+        public static final int protein_left=0x7f0a0037;
+        public static final int protein_table=0x7f0a0034;
+        public static final int protein_total=0x7f0a0035;
+        public static final int saturated_fat_goal=0x7f0a0016;
+        public static final int saturated_fat_left=0x7f0a0017;
+        public static final int saturated_fat_table=0x7f0a0014;
+        public static final int saturated_fat_total=0x7f0a0015;
+        public static final int sodium_goal=0x7f0a0022;
+        public static final int sodium_left=0x7f0a0023;
+        public static final int sodium_table=0x7f0a0020;
+        public static final int sodium_total=0x7f0a0021;
+        public static final int sugar_goal=0x7f0a0032;
+        public static final int sugar_left=0x7f0a0033;
+        public static final int sugar_table=0x7f0a0030;
+        public static final int sugar_total=0x7f0a0031;
         public static final int summary=0x7f0a0009;
-        public static final int trans_fat_goal=0x7f0a0017;
-        public static final int trans_fat_left=0x7f0a0018;
-        public static final int trans_fat_table=0x7f0a0015;
-        public static final int trans_fat_total=0x7f0a0016;
-        public static final int vit_A_goal=0x7f0a0037;
-        public static final int vit_A_left=0x7f0a0038;
-        public static final int vit_A_table=0x7f0a0035;
-        public static final int vit_A_total=0x7f0a0036;
-        public static final int vit_C_goal=0x7f0a003b;
-        public static final int vit_C_left=0x7f0a003c;
-        public static final int vit_C_table=0x7f0a0039;
-        public static final int vit_C_total=0x7f0a003a;
+        public static final int trans_fat_goal=0x7f0a001a;
+        public static final int trans_fat_left=0x7f0a001b;
+        public static final int trans_fat_table=0x7f0a0018;
+        public static final int trans_fat_total=0x7f0a0019;
+        public static final int vit_A_goal=0x7f0a003a;
+        public static final int vit_A_left=0x7f0a003b;
+        public static final int vit_A_table=0x7f0a0038;
+        public static final int vit_A_total=0x7f0a0039;
+        public static final int vit_C_goal=0x7f0a003e;
+        public static final int vit_C_left=0x7f0a003f;
+        public static final int vit_C_table=0x7f0a003c;
+        public static final int vit_C_total=0x7f0a003d;
     }
     public static final class layout {
         public static final int activity_add_entry=0x7f030000;
         public static final int activity_home_page=0x7f030001;
-        public static final int fragment_nutrition_table=0x7f030002;
-        public static final int list_item=0x7f030003;
-        public static final int nutrition_table_row=0x7f030004;
+        public static final int activity_nutrition_page=0x7f030002;
+        public static final int fragment_nutrition_chart=0x7f030003;
+        public static final int fragment_nutrition_table=0x7f030004;
+        public static final int list_item=0x7f030005;
+        public static final int nutrition_table_row=0x7f030006;
     }
     public static final class menu {
         public static final int home_page=0x7f090000;
+        public static final int nutrition_page=0x7f090001;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
@@ -149,6 +264,7 @@ public final class R {
         public static final int app_name=0x7f060000;
         public static final int breakfast=0x7f060024;
         public static final int calcium=0x7f06001e;
+        public static final int calorie_breakdown=0x7f060030;
         public static final int calories_remaining=0x7f060004;
         public static final int calories_remaining_number=0x7f060003;
         public static final int cardiovascular=0x7f060028;
@@ -157,6 +273,8 @@ public final class R {
         public static final int date=0x7f060002;
         public static final int default_number=0x7f060020;
         public static final int dinner=0x7f060026;
+        public static final int drawer_close=0x7f06002e;
+        public static final int drawer_open=0x7f06002d;
         public static final int exercise=0x7f06000c;
         public static final int exercise_calorie_number=0x7f060008;
         public static final int exercise_notes=0x7f06002c;
@@ -180,6 +298,7 @@ public final class R {
         public static final int sodium=0x7f060016;
         public static final int strength=0x7f060029;
         public static final int sugar=0x7f06001a;
+        public static final int title_activity_nutrition_page=0x7f06002f;
         public static final int total=0x7f06000f;
         public static final int total_carbs=0x7f060018;
         public static final int total_fat=0x7f060012;
@@ -218,4 +337,204 @@ public final class R {
          */
         public static final int AppTheme=0x7f080001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a PieChart.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #PieChart_carbPercentage sfsu.csc780.jied.nutriy:carbPercentage}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieChart_carbPieColor sfsu.csc780.jied.nutriy:carbPieColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieChart_dividerWidth sfsu.csc780.jied.nutriy:dividerWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieChart_emptyPieColor sfsu.csc780.jied.nutriy:emptyPieColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieChart_fatPercentage sfsu.csc780.jied.nutriy:fatPercentage}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieChart_fatPieColor sfsu.csc780.jied.nutriy:fatPieColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieChart_pieRadius sfsu.csc780.jied.nutriy:pieRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieChart_proteinPercentage sfsu.csc780.jied.nutriy:proteinPercentage}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieChart_proteinPieColor sfsu.csc780.jied.nutriy:proteinPieColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieChart_showChart sfsu.csc780.jied.nutriy:showChart}</code></td><td></td></tr>
+           <tr><td><code>{@link #PieChart_textColor sfsu.csc780.jied.nutriy:textColor}</code></td><td></td></tr>
+           </table>
+           @see #PieChart_carbPercentage
+           @see #PieChart_carbPieColor
+           @see #PieChart_dividerWidth
+           @see #PieChart_emptyPieColor
+           @see #PieChart_fatPercentage
+           @see #PieChart_fatPieColor
+           @see #PieChart_pieRadius
+           @see #PieChart_proteinPercentage
+           @see #PieChart_proteinPieColor
+           @see #PieChart_showChart
+           @see #PieChart_textColor
+         */
+        public static final int[] PieChart = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a
+        };
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#carbPercentage}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:carbPercentage
+        */
+        public static final int PieChart_carbPercentage = 8;
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#carbPieColor}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:carbPieColor
+        */
+        public static final int PieChart_carbPieColor = 5;
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#dividerWidth}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:dividerWidth
+        */
+        public static final int PieChart_dividerWidth = 2;
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#emptyPieColor}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:emptyPieColor
+        */
+        public static final int PieChart_emptyPieColor = 4;
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#fatPercentage}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:fatPercentage
+        */
+        public static final int PieChart_fatPercentage = 9;
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#fatPieColor}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:fatPieColor
+        */
+        public static final int PieChart_fatPieColor = 6;
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#pieRadius}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:pieRadius
+        */
+        public static final int PieChart_pieRadius = 1;
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#proteinPercentage}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:proteinPercentage
+        */
+        public static final int PieChart_proteinPercentage = 10;
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#proteinPieColor}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:proteinPieColor
+        */
+        public static final int PieChart_proteinPieColor = 7;
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#showChart}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:showChart
+        */
+        public static final int PieChart_showChart = 0;
+        /**
+          <p>This symbol is the offset where the {@link sfsu.csc780.jied.nutriy.R.attr#textColor}
+          attribute's value can be found in the {@link #PieChart} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name sfsu.csc780.jied.nutriy:textColor
+        */
+        public static final int PieChart_textColor = 3;
+    };
 }

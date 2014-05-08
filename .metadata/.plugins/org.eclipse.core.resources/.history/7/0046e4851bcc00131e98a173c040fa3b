@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="my_green">#FF00BE00</color> 
+    <color name="my_red">#FFFF0000</color>
+    <color name="my_blue">#FF0078BE</color>
+    <color name="light_blue">#FFE1EEFF</color>
+    <color name="low_light_gray">#FFFAFAFA</color>
+    <color name="mid_light_gray">#FFEEEEEE</color>
+    <color name="text_gray">#FFAAAAAA</color>
+    <color name="empty_pie_blue">#FF8FE9FF</color>
+</resources>

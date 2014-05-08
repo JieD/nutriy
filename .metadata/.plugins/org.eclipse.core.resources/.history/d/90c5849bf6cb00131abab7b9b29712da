@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/sfsu.csc780.jied.nutriy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+ <sfsu.csc780.jied.nutriy.PieChart
+     custom:showChart="true" />
+</RelativeLayout>

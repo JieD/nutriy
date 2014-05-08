@@ -1,0 +1,116 @@
+package sfsu.csc780.jied.nutriy;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.util.AttributeSet;
+import android.view.View;
+
+/**
+ * Custom view that shows a pie chart of Calorie.
+ */
+public class PieChart extends View {
+	
+	private boolean mShowChart;
+	private float mPieRadius;
+	private float mDividerWidth;
+	
+	private Paint mTextPaint;
+	private int mTextColor;
+	private float mTextSize;
+	
+	private int mEmptyPieColor;
+	private int mCarbPieColor;
+	private int mFatPieColor;
+	private int mProteinPieColor;
+	
+	private Paint mEmptyPiePaint;
+	private Paint mCarbPiePaint;
+	private Paint mFatPiePaint;
+	private Paint mProteinPiePaint;
+
+	/**
+     * Class constructor taking a context and an attribute set. This constructor
+     * is used by the layout engine to construct a {@link PieChart} from a set of
+     * XML attributes.
+     *
+     * @param context
+     * @param attrs   An attribute set which can contain attributes from
+     *                {@link sfsu.csc780.jied.nutriy.R.styleable.PieChart} as well as attributes inherited
+     *                from {@link android.view.View}.
+     */
+	public PieChart(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		
+		// attrs contains the raw values for the XML attributes
+        // that were specified in the layout, which don't include
+        // attributes set by styles or themes, and which may have
+        // unresolved references. Call obtainStyledAttributes()
+        // to get the final values for each attribute.
+        //
+        // This call uses R.styleable.PieChart, which is an array of
+        // the custom attributes that were declared in attrs.xml.
+        TypedArray a = context.getTheme().obtainStyledAttributes(
+                attrs,
+                R.styleable.PieChart,
+                0, 0
+        );
+        
+        try {
+            mShowChart = a.getBoolean(R.styleable.PieChart_showChart, false);
+            mPieRadius = a.getDimension(R.styleable.PieChart_pieRadius, 75.0f);
+            mDividerWidth = a.getDimension(R.styleable.PieChart_dividerWidth, 1.0f);
+            mEmptyPieColor = a.getColor(R.styleable.PieChart_emptyPieColor, 0xFF81CAFF);
+            mCarbPieColor = a.getColor(R.styleable.PieChart_carbPieColor, 0xFF0078BE);
+            mFatPieColor = a.getColor(R.styleable.PieChart_fatPieColor, 0xFF0078BE);
+            mProteinPieColor = a.getColor(R.styleable.PieChart_proteinPieColor, 0xFF0078BE);
+        } finally {
+            a.recycle();
+        }
+        
+		init();
+	}
+	
+	private void init() {
+		
+		mTextColor = getResources().getColor(R.color.white);
+		mTextSize = getResources().getDimension(R.dimen.medium_large_text_size);
+		mTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+	    mTextPaint.setColor(mTextColor);
+	    mTextPaint.setTextSize(mTextSize);
+
+	    mEmptyPiePaint = new Paint(0);
+	    mEmptyPiePaint.setColor(mEmptyPieColor);
+	    mEmptyPiePaint.setStyle(Paint.Style.FILL);
+	}
+	
+	public boolean isShowChart() {
+	   return mShowChart;
+	}
+
+	public void setShowChart(boolean showChart) {
+	   mShowChart = showChart;
+	   invalidate();
+	   requestLayout();
+	}
+	
+	protected void onDraw(Canvas canvas) {
+	   super.onDraw(canvas);
+	   
+	   float cy = mPieRadius + 10.0f;
+	   float cx = getWidth() / 2.0f;
+	   
+	   canvas.drawCircle(cx, cy, mPieRadius, mEmptyPiePaint);
+
+	   /** Draw the pie slices
+	   for (int i = 0; i < mData.size(); ++i) {
+	       Item it = mData.get(i);
+	       mPiePaint.setShader(it.mShader);
+	       canvas.drawArc(mBounds,
+	               360 - it.mEndAngle,
+	               it.mEndAngle - it.mStartAngle,
+	               true, mPiePaint);
+	   }*/
+	}
+}

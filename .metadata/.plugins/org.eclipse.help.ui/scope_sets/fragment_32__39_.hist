@@ -1,0 +1,4 @@
+#Thu Apr 24 08:58:45 PDT 2014
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=fragment '
