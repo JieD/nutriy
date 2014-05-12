@@ -1,7 +1,7 @@
 package sfsu.csc780.jied.nutriy;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +18,16 @@ public class NutritionChartFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
     	super.onActivityCreated(savedInstanceState);
-    	//initializeView();
+    	initializeView();    	
     }
     
-    /**
-     * creating a custom View component and drawing with a Canvas in View.onDraw()
-     */
+    private void initializeView() {    	
+    	View rootView = getView();
+    	
+    	// dynamically change Pie slice
+    	final PieChart pie = (PieChart) rootView.findViewById(R.id.piechart);
+    	pie.setShowChart(true);
+    	
+    	
+    }
 }

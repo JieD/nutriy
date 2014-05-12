@@ -99,15 +99,15 @@
 	                    android:textSize="@dimen/extra_small_text_size" android:textColor="@color/text_gray" />
 	                <TextView 
 	                    android:layout_weight="1" android:paddingLeft="@dimen/medium_padding"
-	                    android:text="@string/food" 
+	                    android:text="@string/uc_food" 
 	                    android:textSize="@dimen/extra_small_text_size" android:textColor="@color/text_gray" />
 	                <TextView 
 	                    android:layout_weight="1" android:paddingLeft="@dimen/medium_padding"
-	                    android:text="@string/exercise" 
+	                    android:text="@string/uc_exercise" 
 	                    android:textSize="@dimen/extra_small_text_size" android:textColor="@color/text_gray" />
 	                <TextView 
 	                    android:layout_weight="1" android:paddingLeft="@dimen/medium_padding"
-	                    android:text="@string/net" 
+	                    android:text="@string/uc_net" 
 	                    android:textSize="@dimen/extra_small_text_size" android:textColor="@color/text_gray" />
 	            </TableRow>
 	        </TableLayout>
@@ -134,7 +134,7 @@
 	
 	<!-- The navigation drawer -->
     <ListView android:id="@+id/left_drawer"
-        android:layout_width="@dimen/drawer_width"
+        android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"

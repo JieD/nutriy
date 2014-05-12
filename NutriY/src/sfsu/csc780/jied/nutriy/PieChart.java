@@ -10,32 +10,37 @@ import android.view.View;
 
 /**
  * Custom view that shows a pie chart of Calorie.
+ * Unfinished text paint
  */
 public class PieChart extends View {
 	
 	private boolean mShowChart;
 	private float mPieRadius;
-	private float mDividerWidth;
 	
 	private Paint mTextPaint;
 	private int mTextColor;
 	private float mTextSize;
 	
 	private int mEmptyPieColor;
-	private int mCarbPieColor;
-	private int mFatPieColor;
-	private int mProteinPieColor;
+	private int mCarbColor;
+	private int mFatColor;
+	private int mProteinColor;
 	
 	private Paint mEmptyPiePaint;
-	private Paint mCarbPiePaint;
-	private Paint mFatPiePaint;
-	private Paint mProteinPiePaint;
 	
-	private double mCarbPercentage;
-	private double mFatPercentage;
-	private double mProteinPercentage;
+	private int mCarbPercentage;
+	private int mFatPercentage;
+	private int mProteinPercentage;
 	
-	private RectF mPieBound;
+	private float centerX;
+	private float centerY;
+	private static final float DEFAULT_OFFSET = 2.0f;
+	private static final float FOCUS_OFFSET = 4.0f;
+	private static final float CARB_SLICE_START_ANGLE = 0;
+	
+	private Slice[] sliceArray = new Slice[3];
+	
+	private RectF mPieBounds = new RectF() ;
 	
 	public PieChart(Context context) {
 		super(context);
@@ -69,15 +74,13 @@ public class PieChart extends View {
         );
         
         try {
-            mShowChart = a.getBoolean(R.styleable.PieChart_showChart, false);
-            mPieRadius = a.getDimension(R.styleable.PieChart_pieRadius, 75.0f);
-            mDividerWidth = a.getDimension(R.styleable.PieChart_dividerWidth, 1.0f);
-            mEmptyPieColor = a.getColor(R.styleable.PieChart_emptyPieColor, 0XFF8FCEFF);
-            mCarbPieColor = a.getColor(R.styleable.PieChart_carbPieColor, 0xFF0000FF);
-            mFatPieColor = a.getColor(R.styleable.PieChart_fatPieColor, 0xFFFF0000);
-            mProteinPieColor = a.getColor(R.styleable.PieChart_proteinPieColor, 0xFF00FF00);
-            mCarbPercentage = a.getInteger(R.styleable.PieChart_carbPercentage, 50);
-            mFatPercentage = a.getInteger(R.styleable.PieChart_fatPercentage, 30);
+            mShowChart         = a.getBoolean(R.styleable.PieChart_showChart, false);
+            mEmptyPieColor     = a.getColor(R.styleable.PieChart_emptyPieColor, R.color.empty_pie_blue);
+            mCarbColor      = a.getColor(R.styleable.PieChart_carbSliceColor, R.color.pie_blue);
+            mFatColor       = a.getColor(R.styleable.PieChart_fatSliceColor, R.color.pie_red);
+            mProteinColor   = a.getColor(R.styleable.PieChart_proteinSliceColor, R.color.pie_green);
+            mCarbPercentage    = a.getInteger(R.styleable.PieChart_carbPercentage, 50);
+            mFatPercentage     = a.getInteger(R.styleable.PieChart_fatPercentage, 30);
             mProteinPercentage = a.getInteger(R.styleable.PieChart_proteinPercentage, 20);
         } finally {
             a.recycle();
@@ -98,21 +101,12 @@ public class PieChart extends View {
 	    mEmptyPiePaint.setColor(mEmptyPieColor);
 	    mEmptyPiePaint.setStyle(Paint.Style.FILL);
 	    
-	    mCarbPiePaint = new Paint(0);
-	    mCarbPiePaint.setColor(mCarbPieColor);
-	    mCarbPiePaint.setStyle(Paint.Style.FILL);
-	    
-	    mFatPiePaint = new Paint(0);
-	    mFatPiePaint.setColor(mFatPieColor);
-	    mFatPiePaint.setStyle(Paint.Style.FILL);
-	    
-	    mProteinPiePaint = new Paint(0);
-	    mProteinPiePaint.setColor(mProteinPieColor);
-	    mProteinPiePaint.setStyle(Paint.Style.FILL);
-	    
-	    mPieBound = new RectF(0.0f, 0.0f, mPieRadius * 2, mPieRadius * 2);
-	    mPieBound.offsetTo(getWidth() / 2 +  mPieRadius, 10.0f);
-	    //mPieBound.offset(getWidth() / 2, 10.0f);
+	    Slice mCarbSlice = new Slice(mPieBounds, CARB_SLICE_START_ANGLE, mCarbPercentage, mCarbColor);
+	    Slice mFatSlice = new Slice(mPieBounds, mCarbSlice.getEndAngle(), mFatPercentage, mFatColor);
+	    Slice mProteinSlice = new Slice(mPieBounds, mFatSlice.getEndAngle(), mProteinPercentage, mProteinColor);
+	    sliceArray[0] = mCarbSlice;
+	    sliceArray[1] = mFatSlice;
+	    sliceArray[2] = mProteinSlice;
 	}
 	
 	public boolean isShowChart() {
@@ -125,29 +119,185 @@ public class PieChart extends View {
 	   requestLayout();
 	}
 	
+	@Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+
+        //
+        // Set dimensions for text, pie chart, etc
+        //
+        // Account for padding
+        float xpad = (float) (getPaddingLeft() + getPaddingRight());
+        float ypad = (float) (getPaddingTop() + getPaddingBottom());
+
+        float ww = (float) w - xpad;
+        float hh = (float) h - ypad;
+        
+        setPieBounds(ww, hh);
+	}
+	
+	// Figure out how big we can make the pie.
+	private void setPieBounds(float w, float h) {
+		centerX = ((float) w) / 2;
+		centerY = ((float) h) / 2;
+		mPieRadius = Math.min(w, h) / 2;
+		mPieBounds.set(
+				centerX - mPieRadius,
+				centerY - mPieRadius,
+				centerX + mPieRadius,
+				centerY + mPieRadius
+				);
+		float xOffset = centerX - mPieRadius;
+		mPieBounds.offsetTo(xOffset, getPaddingTop());
+	}
+	
+	// Draw the pie slices
+	public void drawSlices(Canvas canvas) {
+		for (int i = 0; i < sliceArray.length; i++) {
+			Slice slice = sliceArray[i];
+			slice.setOffsetBounds(mPieBounds, DEFAULT_OFFSET);
+			
+			if (i == 2) {
+				// added to draw the full circle
+				slice.setSweepAngle(-slice.getStartAngle() - 360);
+			}
+			canvas.drawArc(slice.getmBounds(), slice.getStartAngle(), 
+				slice.getSweepAngle(), true, slice.getPaint());
+			slice.setOriginalBounds(mPieBounds, DEFAULT_OFFSET);
+		}	
+	}
+	
 	protected void onDraw(Canvas canvas) {
 	   super.onDraw(canvas);
 	   
-	   float cy = mPieRadius + 10.0f;
-	   float cx = getWidth() / 2.0f;
-	   
 	   if (mShowChart) {
-		   canvas.drawArc(mPieBound, 0, -180, true, mCarbPiePaint);
-		   canvas.drawArc(mPieBound, 180, -108, true, mFatPiePaint);
-		   canvas.drawArc(mPieBound, 0, 72, true, mProteinPiePaint);
+		   drawSlices(canvas);
 	   } else {
-		   canvas.drawCircle(cx, cy, mPieRadius, mEmptyPiePaint);
+		   canvas.drawCircle(centerX, centerY, mPieRadius, mEmptyPiePaint);
 	   }
-	      
+	}
 
-	   /** Draw the pie slices
-	   for (int i = 0; i < mData.size(); ++i) {
-	       Item it = mData.get(i);
-	       mPiePaint.setShader(it.mShader);
-	       canvas.drawArc(mBounds,
-	               360 - it.mEndAngle,
-	               it.mEndAngle - it.mStartAngle,
-	               true, mPiePaint);
-	   }*/
+	public double getmCarbPercentage() {
+		return mCarbPercentage;
+	}
+
+	public void setmCarbPercentage(int mCarbPercentage) {
+		this.mCarbPercentage = mCarbPercentage;
+	    invalidate();
+	    requestLayout();
+	}
+
+	public double getmFatPercentage() {
+		return mFatPercentage;
+	}
+
+	public void setmFatPercentage(int mFatPercentage) {
+		this.mFatPercentage = mFatPercentage;
+		invalidate();
+	    requestLayout();
+	}
+
+	public double getmProteinPercentage() {
+		return mProteinPercentage;
+	}
+
+	public void setmProteinPercentage(int mProteinPercentage) {
+		this.mProteinPercentage = mProteinPercentage;
+		invalidate();
+	    requestLayout();
+	}
+	
+	private class Slice {
+		public RectF mBounds;
+        
+		public int mPercentage;
+        public int mColor;
+        public Paint mPaint;
+
+        // computed values
+        public float mStartAngle;
+        public float mSweepAngle;
+        
+        public Slice(RectF bounds, float startAngle, int percentage, int color) {
+        	mBounds = bounds;
+        	mPercentage = percentage;
+        	mColor = color;
+        	mStartAngle = startAngle;
+        	mSweepAngle = 360 * percentage / -100; 
+        	initPaint(color);
+        } 
+        
+        public Paint initPaint(int color) {
+        	mPaint = new Paint(0);
+	        mPaint.setColor(mColor);
+	        mPaint.setStyle(Paint.Style.FILL);
+	        return mPaint;
+        }
+        
+        /** 
+         * Note: Math.sin/cos(radian), not Math.sin/cos(angle)
+         * @param  offset - to create gap between pie slices
+         * @return [xOffset, yOffset]
+         */
+        public float[] calculateOffset(float offset) {
+        	float offsetArray[] = new float[2];
+        	float centerAngle = - (mStartAngle + mSweepAngle / 2);
+        	double radian = 2 * Math.PI * centerAngle / 360;
+        	offsetArray[0] = (float) (Math.cos(radian) * offset);
+        	offsetArray[1] = - (float) (Math.sin(radian) * offset);
+        	return offsetArray;
+        }
+        
+        // move the bound to incorporate offset
+        public void setOffsetBounds(RectF originalBound, float offset) {
+        	float offsetArray[] = calculateOffset(offset);
+        	originalBound.offset(offsetArray[0], offsetArray[1]);
+        }
+        
+        // return to the original bound
+        public void setOriginalBounds(RectF offsetBound, float offset) {
+        	float offsetArray[] = calculateOffset(offset);
+        	offsetBound.offset(-offsetArray[0], -offsetArray[1]);
+        }
+        
+        public float getEndAngle() {
+        	return mStartAngle + mSweepAngle;
+        }
+        
+        public Paint getPaint() {
+        	return mPaint;
+        }
+
+		public int getPercentage() {
+			return mPercentage;
+		}
+
+		public void setPercentage(int percentage) {
+			this.mPercentage = percentage;
+		}
+
+		public float getStartAngle() {
+			return mStartAngle;
+		}
+
+		public void setStartAngle(float startAngle) {
+			this.mStartAngle = startAngle;
+		}
+
+		public float getSweepAngle() {
+			return mSweepAngle;
+		}
+
+		public void setSweepAngle(float sweepAngle) {
+			this.mSweepAngle = sweepAngle;
+		}          
+		
+		public RectF getmBounds() {
+			return mBounds;
+		}
+
+		public void setmBounds(RectF mBounds) {
+			this.mBounds = mBounds;
+		}
 	}
 }

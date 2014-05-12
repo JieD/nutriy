@@ -44,7 +44,7 @@
 	    <TextView 
 	        android:layout_width="match_parent" android:layout_height="@dimen/small_entry_height"
 	        android:gravity="center_vertical"   android:background="@color/text_gray"
-	        android:text = "@string/exercise"      android:textStyle="bold"
+	        android:text = "@string/uc_exercise"      android:textStyle="bold"
 	        android:textSize="@dimen/small_text_size" 
 	        android:paddingLeft="@dimen/small_padding"/>
 	    <TextView 

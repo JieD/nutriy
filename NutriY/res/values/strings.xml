@@ -13,9 +13,9 @@
     <string name="exercise_calorie_number">- 0</string>
     <string name="net_calorie_number">0</string>
     <string name="uc_goal">GOAL</string>
-    <string name="food">FOOD</string>
-    <string name="exercise">EXERCISE</string>
-    <string name="net">NET</string>
+    <string name="uc_food">FOOD</string>
+    <string name="uc_exercise">EXERCISE</string>
+    <string name="uc_net">NET</string>
     <string name="goal">Goal</string>
     <string name="total">Total</string>
     <string name="left">Left</string>
@@ -48,6 +48,7 @@
     <string name="food_notes">Food Notes</string>
     <string name="exercise_notes">Exercise Notes</string>
 
+    <!-- Nav Drawer Menu Items -->
     <string-array name="navigations_array">
         <item>Home</item>
         <item>Diary</item>
@@ -56,13 +57,32 @@
         <item>Goals</item>
         <item>Settings</item>
     </string-array>
+    
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_menu_home</item>
+        <item>@drawable/ic_action_collection</item>
+        <item>@drawable/ic_action_data_usage</item>
+        <item>@drawable/ic_action_picture</item>
+        <item>@drawable/ic_action_good</item>
+        <item>@drawable/ic_action_settings</item>
+    </array>
+    
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
 
-    <string name="drawer_open">Open Drawer</string>
-    <string name="drawer_close">Close Drawer</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
     <string name="title_activity_nutrition_page">NutritionPageActivity</string>
 
     <string name="calorie_breakdown">CALORIE BREAKDOWN</string>
-    
+    <string name="Carbohydrates">Carbohydrates</string>
+    <string name="Fat">Fat</string>
+    <string name="Protein">Protein</string>
+    <string name="carbs_goal">50 %</string>
+    <string name="fat_goal">30 %</string>
+    <string name="protein_goal">20 %</string>
     
 
 </resources>

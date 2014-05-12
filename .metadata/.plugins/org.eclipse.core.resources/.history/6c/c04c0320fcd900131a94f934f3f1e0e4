@@ -1,0 +1,7 @@
+package sfsu.csc780.jied.nutriy;
+
+
+
+public class HomePageFragment extends Fragment {
+	
+}

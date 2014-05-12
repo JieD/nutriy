@@ -1,0 +1,5 @@
+package sfsu.csc780.jied.nutriy;
+
+import android.support.v4.app.FragmentActivity;
+
+public class HomePageFragment extends Fragment {

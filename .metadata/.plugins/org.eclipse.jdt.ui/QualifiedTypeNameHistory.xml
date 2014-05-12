@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
-<fullyQualifiedTypeName name="android.support.v4.widget.DrawerLayout"/>
-<fullyQualifiedTypeName name="android.widget.ListView"/>
 <fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.R.id"/>
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
-<fullyQualifiedTypeName name="android.support.v4.app.ActionBarDrawerToggle"/>
-<fullyQualifiedTypeName name="android.view.Menu"/>
-<fullyQualifiedTypeName name="android.content.res.Configuration"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="android.view.MenuItem"/>
-<fullyQualifiedTypeName name="android.app.Activity"/>
-<fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="android.graphics.Paint"/>
 <fullyQualifiedTypeName name="android.graphics.Color"/>
 <fullyQualifiedTypeName name="android.util.AttributeSet"/>
-<fullyQualifiedTypeName name="android.content.res.TypedArray"/>
-<fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.R.color"/>
 <fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.R.array"/>
 <fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.R.string"/>
 <fullyQualifiedTypeName name="android.graphics.Canvas"/>
 <fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.R.dimen"/>
 <fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.R.styleable"/>
 <fullyQualifiedTypeName name="android.graphics.RectF"/>
+<fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.R.color"/>
+<fullyQualifiedTypeName name="android.app.Activity"/>
+<fullyQualifiedTypeName name="android.support.v4.widget.DrawerLayout"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="android.support.v4.app.ActionBarDrawerToggle"/>
+<fullyQualifiedTypeName name="android.content.res.TypedArray"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.adapter.NavDrawerListAdapter"/>
+<fullyQualifiedTypeName name="sfsu.csc780.jied.nutriy.model.NavDrawerItem"/>
+<fullyQualifiedTypeName name="android.os.Bundle"/>
+<fullyQualifiedTypeName name="android.view.View"/>
+<fullyQualifiedTypeName name="android.view.Menu"/>
+<fullyQualifiedTypeName name="android.content.res.Configuration"/>
+<fullyQualifiedTypeName name="android.view.MenuItem"/>
 </qualifiedTypeNameHistroy>

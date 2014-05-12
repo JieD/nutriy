@@ -35,4 +35,13 @@ Log File
 4/14 Navigation Drawer - add ListView and Listener
 4/16 Navigation Drawer - Icon & update local environment with GoogleCode
                          color when selected, change title on ActionBar
-4/17 Navigation Drawer - update log
+4/17 Navigation Drawer - 
+4/23 Custom View - NutritionChartFragment
+4/24 Custom View - PieChart, color, TypedArray, custom attributes
+5/8  Custom View - improve color, add table, redesign the code for better structure, try to add gap between pie slices
+5/9  Custom View - mathematical model for calcuation offset of each slice according to its percentage (startAngle & endAngle)
+5/10 Custom View - restructure code, create Slice class to encapsulate properties - practise DRY, better understand of custom view and how to dynamically change properties
+5/11 MainAcitivity - add NavigationDrawer for each Activity. 
+     Reconstruct - MainAcitivity has Navigation Drawer, other existing Activity convers into Fragment. Use selector to enable only one item selected. 
+     Create customed ListViewAdapter & ListViewItem
+5/12 Convert Activity to Fragment, add proper comments.
