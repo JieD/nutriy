@@ -1,15 +1,17 @@
 package sfsu.csc780.jied.nutriy;
 
 import java.util.ArrayList;
+
 import sfsu.csc780.jied.nutriy.adapter.NavDrawerListAdapter;
 import sfsu.csc780.jied.nutriy.model.NavDrawerItem;
-import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
@@ -21,13 +23,14 @@ import android.widget.ListView;
 /**
  * @author jied
  * @date 5/12/2014
+ * 
  * Add NavigationDrawer 
  * 1. Creating a NavDrawerListAdapter instance and adding list items.
  * 2. Assigning the adapter to Navigation Drawer ListView
  * 3. Creating click event listener for list items
  * 4. Creating and displaying fragment activities on selecting list item.
  */
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -62,10 +65,10 @@ public class MainActivity extends Activity {
 	}
 
 	private void initNavigationList() {		
-		// load slide menu items
+		// load navigation menu titles
         navMenuTitles = getResources().getStringArray(R.array.navigations_array);
  
-        // nav drawer icons from resources
+        // navigation drawer icons from resources
         navMenuIcons = getResources()
                 .obtainTypedArray(R.array.nav_drawer_icons);
         
@@ -90,16 +93,16 @@ public class MainActivity extends Activity {
         // Recycle the typed array
         navMenuIcons.recycle();
  
-        // setting the nav drawer list adapter
+        // setting the navigation drawer list adapter - use the custom Adapter
         mDrawerList.setAdapter(new NavDrawerListAdapter(getApplicationContext(), navDrawerItems));
         
-     // Set the list's click listener
+        // Set the list's click listener
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 	}
 	
 	private class DrawerItemClickListener implements ListView.OnItemClickListener {
 	    @Override
-	    public void onItemClick(AdapterView parent, View view, int position, long id) {
+	    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 	        selectItem(position);
 	    }
 	}
@@ -109,34 +112,35 @@ public class MainActivity extends Activity {
 		// update the main content by replacing fragments		
 		Fragment fragment = null;
         switch (position) {
-        case 0:
-            fragment = new HomePageFragment();
-            break;
-        case 1:
-            //fragment = new FindPeopleFragment();
-            break;
-        case 2:
-            fragment = new NutritionChartFragment();
-            break;
-        case 3:
-            //fragment = new CommunityFragment();
-            break;
-        case 4:
-            //fragment = new PagesFragment();
-            break;
-        case 5:
-            //fragment = new WhatsHotFragment();
-            break;
- 
-        default:
-            break;
+	        case 0:
+	            fragment = new HomePageFragment();
+	            break;
+	        case 1:
+	            //fragment = new DiaryPageFragment();
+	            break;
+	        case 2:
+	            fragment = new NutritionChartFragment();
+	            break;
+	        case 3:
+	            //fragment = new ProgressPageFragment();
+	            break;
+	        case 4:
+	            //fragment = new GoalPageFragment();
+	            break;
+	        case 5:
+	            //fragment = new SettingPageFragment();
+	            break;
+	 
+	        default:
+	            break;
         }
  
         if (fragment != null) {
         	// Insert the fragment by replacing any existing fragment
-            FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame, fragment).commit();
+        	FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        	transaction.replace(R.id.content_frame, fragment);
+        	transaction.addToBackStack(null);
+        	transaction.commit();
  
             // Highlight the selected item, update the title, and close the drawer
             mDrawerList.setItemChecked(position, true);
@@ -193,7 +197,7 @@ public class MainActivity extends Activity {
  
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // toggle nav drawer on selecting action bar app icon/title
+        // toggle navigation drawer on selecting action bar app icon/title
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }

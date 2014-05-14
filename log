@@ -40,8 +40,13 @@ Log File
 4/24 Custom View - PieChart, color, TypedArray, custom attributes
 5/8  Custom View - improve color, add table, redesign the code for better structure, try to add gap between pie slices
 5/9  Custom View - mathematical model for calcuation offset of each slice according to its percentage (startAngle & endAngle)
-5/10 Custom View - restructure code, create Slice class to encapsulate properties - practise DRY, better understand of custom view and how to dynamically change properties
+5/10 Custom View - resconstruct code, create Slice class to encapsulate properties - practise DRY, better understanding of custom view and how to dynamically change properties
 5/11 MainAcitivity - add NavigationDrawer for each Activity. 
-     Reconstruct - MainAcitivity has Navigation Drawer, other existing Activity convers into Fragment. Use selector to enable only one item selected. 
+     Reconstruct - MainAcitivity has Navigation Drawer, other existing Activity convers into Fragment.
+     Use selector to enable only one item selected. 
      Create customed ListViewAdapter & ListViewItem
 5/12 Convert Activity to Fragment, add proper comments.
+5/14 Convert Activity to Fragment, add proper comments.
+     Avoid ivoking fragments from fragment. All transaction is done inside an Activity
+     Convert AddEntry layout to be ExpandableListView to enable grouping and division 
+

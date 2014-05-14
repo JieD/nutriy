@@ -2,8 +2,8 @@ package sfsu.csc780.jied.nutriy;
 
 import java.util.HashMap;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class NutritionTableFragment extends Fragment {
+	
+	private View rootView;
 	
 	public final static HashMap<String, String> NUTRITION_GOAL_TABLE;
 	
@@ -37,7 +39,8 @@ public class NutritionTableFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
         Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-    	return inflater.inflate(R.layout.fragment_nutrition_table, container, false);        
+    	rootView = inflater.inflate(R.layout.fragment_nutrition_table, container, false);      
+    	return rootView;
     }
     
     @Override

@@ -202,10 +202,10 @@ containing a value of this type.
         public static final int cholesterol_table=0x7f0a0024;
         public static final int cholesterol_total=0x7f0a0025;
         public static final int content_frame=0x7f0a000c;
-        public static final int date=0x7f0a0000;
+        public static final int date=0x7f0a0001;
         public static final int drawer_counter=0x7f0a0011;
         public static final int drawer_icon=0x7f0a000f;
-        public static final int drawer_layout=0x7f0a0001;
+        public static final int drawer_layout=0x7f0a0000;
         public static final int drawer_title=0x7f0a0010;
         public static final int fat_goal=0x7f0a001a;
         public static final int fat_left=0x7f0a001b;
@@ -265,11 +265,11 @@ containing a value of this type.
         public static final int vit_C_total=0x7f0a0045;
     }
     public static final class layout {
-        public static final int activity_add_entry=0x7f030000;
-        public static final int activity_home_page=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_nutrition_page=0x7f030003;
-        public static final int drawer_list_item=0x7f030004;
+        public static final int activity_home_page=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int activity_nutrition_page=0x7f030002;
+        public static final int drawer_list_item=0x7f030003;
+        public static final int fragment_add_entry=0x7f030004;
         public static final int fragment_home_page=0x7f030005;
         public static final int fragment_nutrition_chart=0x7f030006;
         public static final int fragment_nutrition_table=0x7f030007;
