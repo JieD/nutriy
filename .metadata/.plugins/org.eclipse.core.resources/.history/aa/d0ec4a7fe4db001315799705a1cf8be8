@@ -1,0 +1,54 @@
+package sfsu.csc780.jied.nutriy;
+
+import java.util.HashMap;
+import java.util.List;
+
+import sfsu.csc780.jied.nutriy.adapter.ExpandableListAdapter;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ExpandableListView;
+
+public class AddEntryFragment extends Fragment {
+	
+	private View rootView;
+	ExpandableListAdapter listAdapter;
+    ExpandableListView expListView;
+    List<String> listDataHeader;
+    HashMap<String, List<String>> listDataChild;
+	
+	public AddEntryFragment() {}
+	
+	@Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+  
+        rootView = inflater.inflate(R.layout.add_entry_list, container, false);
+          
+        return rootView;
+    }
+	
+	@Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+    	super.onActivityCreated(savedInstanceState);
+    	
+    	// get the listview
+        expListView = (ExpandableListView) rootView.findViewById(R.id.lvExp);
+ 
+        // preparing list data
+        prepareListData();
+ 
+        listAdapter = new ExpandableListAdapter(getActivity().getApplicationContext(), listDataHeader, listDataChild);
+ 
+        // setting list adapter
+        expListView.setAdapter(listAdapter);
+	}
+	
+	private void prepareListData() {
+		// load add entry list header titles
+		String[] itemHeaders = getResources().getStringArray(R.array.add_entry_list_header_array);
+        
+	}
+}

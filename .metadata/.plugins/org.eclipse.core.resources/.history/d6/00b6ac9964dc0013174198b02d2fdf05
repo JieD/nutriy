@@ -1,0 +1,100 @@
+package sfsu.csc780.jied.nutriy;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+
+import sfsu.csc780.jied.nutriy.adapter.ExpandableListAdapter;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ExpandableListView;
+
+public class AddEntryFragment extends Fragment {
+	
+	private View rootView;
+	ExpandableListAdapter listAdapter;
+    ExpandableListView expListView;
+    List<String> listDataHeader;
+    HashMap<String, List<String>> listDataChild;
+	
+	public AddEntryFragment() {}
+	
+	@Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+  
+        rootView = inflater.inflate(R.layout.add_entry_list, container, false);
+          
+        return rootView;
+    }
+	
+	@Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+    	super.onActivityCreated(savedInstanceState);
+    	
+    	// get the listview
+        expListView = (ExpandableListView) rootView.findViewById(R.id.lvExp);
+ 
+        // preparing list data
+        prepareListData();
+ 
+        listAdapter = new ExpandableListAdapter(getActivity().getApplicationContext(), listDataHeader, listDataChild);
+ 
+        // setting list adapter
+        expListView.setAdapter(listAdapter);
+	}
+	
+	private void prepareListData() {
+		/** final int[] array_ids = {R.array.meal_child_array, R.array.exercise_child_array, 
+				R.array.water_child_array, R.array.note_child_array};
+		
+		// load add entry list header titles
+		String[] itemHeaders = getResources().getStringArray(R.array.add_entry_list_header_array);
+        listDataHeader = Arrays.asList(itemHeaders);
+        listDataChild = new HashMap<String, List<String>>();
+        Log.d("header", Arrays.toString(itemHeaders));
+        String[] headerChild;
+        for (int i = 0; i < itemHeaders.length; i++) {
+        	headerChild = getResources().getStringArray(array_ids[i]);
+        	Log.d("headerChild", Arrays.toString(headerChild));
+        	listDataChild.put(itemHeaders[0], Arrays.asList(headerChild));
+        } */
+		
+		listDataHeader = new ArrayList<String>();
+        listDataChild = new HashMap<String, List<String>>();
+ 
+        // Adding child data
+        listDataHeader.add("Meals");
+        listDataHeader.add("Exercise");
+        listDataHeader.add("Water");
+        listDataHeader.add("Notes");
+ 
+        // Adding child data
+        List<String> mealChilad = new ArrayList<String>();
+        mealChilad.add("Breakfast");
+        mealChilad.add("Lunch");
+        mealChilad.add("Dinner");
+        mealChilad.add("Snacks");
+ 
+        List<String> exerciseChild = new ArrayList<String>();
+        exerciseChild.add("Cardiovascular");
+        exerciseChild.add("Strength");
+ 
+        List<String> waterChild = new ArrayList<String>();
+        waterChild.add("water");
+        
+        List<String> noteChild = new ArrayList<String>();
+        noteChild.add("Food Notes");
+        noteChild.add("Exercise Notes");
+ 
+        listDataChild.put(listDataHeader.get(0), mealChilad); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), noteChild);
+        listDataChild.put(listDataHeader.get(2), waterChild);
+        listDataChild.put(listDataHeader.get(3), noteChild);
+	}
+}
