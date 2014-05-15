@@ -1,0 +1,7 @@
+Summary of what I have learnt about essential Android design principles
+1. All Fragment-to-Fragment communication is done through the associated Activity. Two Fragments should never communicate directly.
+2. Use Fragments for Navigation Drawer, instead of Activites
+3. Nested Fragment cannot use <fragment> tag in XML. Use getChildFragmentManager() to add new Fragment transaction
+4. ListView - each item if not inside a layout container, its height is not set properly. Need to use minHeight.
+5. Hide ExpandableListView group indicators - android:groupIndicator=@null
+6. ScrollView cannot be combined with ListView

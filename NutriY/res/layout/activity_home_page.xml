@@ -121,13 +121,11 @@
 	            android:layout_marginTop="10dp" android:background="@color/my_blue"
 	            android:paddingLeft="@dimen/large_padding" />
 		    
-		    <fragment
-		        android:name="sfsu.csc780.jied.nutriy.NutritionTableFragment"
+		    <TableLayout
 		        android:id="@+id/nutritionTableFragment"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content" 
-		        android:layout_below="@id/summary">
-		    </fragment>
+		        android:layout_below="@id/summary" />
 		        
 		</RelativeLayout>	
 	</ScrollView>

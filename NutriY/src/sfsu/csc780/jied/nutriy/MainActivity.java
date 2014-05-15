@@ -30,7 +30,8 @@ import android.widget.ListView;
  * 3. Creating click event listener for list items
  * 4. Creating and displaying fragment activities on selecting list item.
  */
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity 
+	implements HomePageFragment.OnAddEntryClickListener {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -46,15 +47,18 @@ public class MainActivity extends FragmentActivity {
     private TypedArray navMenuIcons;  // use TypedArray to retrieve the icon ID
  
     private ArrayList<NavDrawerItem> navDrawerItems;
+    
+    private Bundle mSavedInstanceState;
  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mSavedInstanceState = savedInstanceState;
         setContentView(R.layout.activity_main);   
         initNavigationDrawer();
         
         // on first time display view for first nav item
-        if (savedInstanceState == null) {          
+        if (mSavedInstanceState == null) {          
             selectItem(0);
         }
     }
@@ -119,7 +123,7 @@ public class MainActivity extends FragmentActivity {
 	            //fragment = new DiaryPageFragment();
 	            break;
 	        case 2:
-	            fragment = new NutritionChartFragment();
+	            fragment = new NutritionPageFragment();
 	            break;
 	        case 3:
 	            //fragment = new ProgressPageFragment();
@@ -136,11 +140,7 @@ public class MainActivity extends FragmentActivity {
         }
  
         if (fragment != null) {
-        	// Insert the fragment by replacing any existing fragment
-        	FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        	transaction.replace(R.id.content_frame, fragment);
-        	transaction.addToBackStack(null);
-        	transaction.commit();
+        	replaceFragment(fragment);
  
             // Highlight the selected item, update the title, and close the drawer
             mDrawerList.setItemChecked(position, true);
@@ -239,4 +239,26 @@ public class MainActivity extends FragmentActivity {
         // Pass any configuration change to the drawer toggles
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
+
+	@Override
+	public void onAddEntryClick() {		
+    	Fragment addEntryFragment = new AddEntryFragment();
+    	replaceFragment(addEntryFragment);
+	}
+	
+	private void replaceFragment(Fragment newFragment) {
+		if (newFragment != null) {
+            
+			// Insert the fragment by replacing any existing fragment
+	    	FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+	   	
+	    	// Replace whatever is in the fragment_container view with this fragment,
+	    	// and add the transaction to the back stack
+	    	transaction.replace(R.id.content_frame, newFragment);
+	    	transaction.addToBackStack(null);
+	    	
+	    	// Commit the transaction
+	    	transaction.commit();
+		}
+	}
 }

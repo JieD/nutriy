@@ -47,6 +47,9 @@ Log File
      Create customed ListViewAdapter & ListViewItem
 5/12 Convert Activity to Fragment, add proper comments.
 5/14 Convert Activity to Fragment, add proper comments.
-     Avoid ivoking fragments from fragment. All transaction is done inside an Activity
+     Avoid invoking fragments from fragment. All transaction is done inside an Activity
+     Enable button click programmaticlly due to XML way only works for Acitivity
      Convert AddEntry layout to be ExpandableListView to enable grouping and division 
+5/15 Successfully use ExpandableListView with custom ExpandableListAdapter, expande by default and hide group indicators
+     Add click listeners
 

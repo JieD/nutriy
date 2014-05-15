@@ -26,8 +26,6 @@ public class NutritionChartFragment extends Fragment {
     	
     	// dynamically change Pie slice
     	final PieChart pie = (PieChart) rootView.findViewById(R.id.piechart);
-    	pie.setShowChart(true);
-    	
-    	
+    	pie.setShowChart(true);  	
     }
 }

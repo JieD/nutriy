@@ -38,6 +38,7 @@
     <string name="meals">MEALS</string>
     <string name="water_upcase">WATER</string>
     <string name="notes">NOTES</string>
+    
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
     <string name="dinner">Dinner</string>
@@ -48,6 +49,39 @@
     <string name="food_notes">Food Notes</string>
     <string name="exercise_notes">Exercise Notes</string>
 
+    <!-- Add Entry List Headers -->
+    <string-array name="add_entry_list_header_array">
+        <item>MEALS</item>
+        <item>EXERCISE</item>
+        <item>WATER</item>
+        <item>NOTES</item>
+    </string-array>
+    
+    <!-- Add Entry List Meal Items -->
+    <string-array name="meal_child_array">
+        <item>Breakfast</item>
+	    <item>Lunch</item>
+	    <item>Dinner</item>
+	    <item>Snacks</item>
+    </string-array>
+    
+    <!-- Add Entry List Exercise Items -->
+    <string-array name="exercise_child_array">
+        <item>Cardiovascular</item>
+	    <item>Strength</item>
+    </string-array>
+    
+    <!-- Add Entry List Water Items -->
+    <string-array name="water_child_array">
+        <item>Water</item>
+    </string-array>
+    
+    <!-- Add Entry List Note Items -->
+    <string-array name="note_child_array">
+        <item>Food Notes</item>
+	    <item>Exercise Notes</item>
+    </string-array>
+    
     <!-- Nav Drawer Menu Items -->
     <string-array name="navigations_array">
         <item>Home</item>
@@ -74,7 +108,6 @@
 
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
-    <string name="title_activity_nutrition_page">NutritionPageActivity</string>
 
     <string name="calorie_breakdown">CALORIE BREAKDOWN</string>
     <string name="Carbohydrates">Carbohydrates</string>

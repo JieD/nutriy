@@ -9,13 +9,28 @@ package sfsu.csc780.jied.nutriy;
 
 public final class R {
     public static final class array {
+        /**  Add Entry List Headers 
+         */
+        public static final int add_entry_list_header_array=0x7f070000;
+        /**  Add Entry List Exercise Items 
+         */
+        public static final int exercise_child_array=0x7f070002;
+        /**  Add Entry List Meal Items 
+         */
+        public static final int meal_child_array=0x7f070001;
         /**  Nav Drawer List Item Icons 
  Keep them in order as the titles are 
          */
-        public static final int nav_drawer_icons=0x7f070001;
+        public static final int nav_drawer_icons=0x7f070006;
         /**  Nav Drawer Menu Items 
          */
-        public static final int navigations_array=0x7f070000;
+        public static final int navigations_array=0x7f070005;
+        /**  Add Entry List Note Items 
+         */
+        public static final int note_child_array=0x7f070004;
+        /**  Add Entry List Water Items 
+         */
+        public static final int water_child_array=0x7f070003;
     }
     public static final class attr {
         /** <p>Must be an integer value, such as "<code>100</code>".
@@ -181,100 +196,107 @@ containing a value of this type.
         public static final int table_divider=0x7f020016;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0051;
+        public static final int action_settings=0x7f0a0054;
         public static final int add_to_diary=0x7f0a0006;
         public static final int button_bottom_gap=0x7f0a0005;
-        public static final int calcium_goal=0x7f0a004a;
-        public static final int calcium_left=0x7f0a004b;
-        public static final int calcium_table=0x7f0a0048;
-        public static final int calcium_total=0x7f0a0049;
+        public static final int calcium_goal=0x7f0a004d;
+        public static final int calcium_left=0x7f0a004e;
+        public static final int calcium_table=0x7f0a004b;
+        public static final int calcium_total=0x7f0a004c;
         public static final int calorie_break_down=0x7f0a0008;
         public static final int calories_remaining=0x7f0a0003;
         public static final int calories_remaining_number=0x7f0a0002;
-        public static final int carb_percentage=0x7f0a0014;
-        public static final int carbs_goal=0x7f0a0032;
-        public static final int carbs_left=0x7f0a0033;
-        public static final int carbs_table=0x7f0a0030;
-        public static final int carbs_total=0x7f0a0031;
+        public static final int carb_percentage=0x7f0a0017;
+        public static final int carbs_goal=0x7f0a0035;
+        public static final int carbs_left=0x7f0a0036;
+        public static final int carbs_table=0x7f0a0033;
+        public static final int carbs_total=0x7f0a0034;
         public static final int center_fake_view=0x7f0a0004;
-        public static final int cholesterol_goal=0x7f0a0026;
-        public static final int cholesterol_left=0x7f0a0027;
-        public static final int cholesterol_table=0x7f0a0024;
-        public static final int cholesterol_total=0x7f0a0025;
+        public static final int cholesterol_goal=0x7f0a0029;
+        public static final int cholesterol_left=0x7f0a002a;
+        public static final int cholesterol_table=0x7f0a0027;
+        public static final int cholesterol_total=0x7f0a0028;
         public static final int content_frame=0x7f0a000c;
         public static final int date=0x7f0a0001;
-        public static final int drawer_counter=0x7f0a0011;
-        public static final int drawer_icon=0x7f0a000f;
+        public static final int drawer_counter=0x7f0a0014;
+        public static final int drawer_icon=0x7f0a0012;
         public static final int drawer_layout=0x7f0a0000;
-        public static final int drawer_title=0x7f0a0010;
-        public static final int fat_goal=0x7f0a001a;
-        public static final int fat_left=0x7f0a001b;
-        public static final int fat_percentage=0x7f0a0015;
-        public static final int fat_table=0x7f0a0018;
-        public static final int fat_total=0x7f0a0019;
-        public static final int fiber_goal=0x7f0a0036;
-        public static final int fiber_left=0x7f0a0037;
-        public static final int fiber_table=0x7f0a0034;
-        public static final int fiber_total=0x7f0a0035;
+        public static final int drawer_title=0x7f0a0013;
+        public static final int fat_goal=0x7f0a001d;
+        public static final int fat_left=0x7f0a001e;
+        public static final int fat_percentage=0x7f0a0018;
+        public static final int fat_table=0x7f0a001b;
+        public static final int fat_total=0x7f0a001c;
+        public static final int fiber_goal=0x7f0a0039;
+        public static final int fiber_left=0x7f0a003a;
+        public static final int fiber_table=0x7f0a0037;
+        public static final int fiber_total=0x7f0a0038;
         public static final int gap_view=0x7f0a0007;
-        public static final int iron_goal=0x7f0a004e;
-        public static final int iron_left=0x7f0a004f;
-        public static final int iron_table=0x7f0a004c;
-        public static final int iron_total=0x7f0a004d;
+        public static final int iron_goal=0x7f0a0051;
+        public static final int iron_left=0x7f0a0052;
+        public static final int iron_table=0x7f0a004f;
+        public static final int iron_total=0x7f0a0050;
+        public static final int lblListHeader=0x7f0a0010;
+        public static final int lblListItem=0x7f0a0011;
         public static final int left_drawer=0x7f0a000b;
-        public static final int list_item=0x7f0a0050;
+        public static final int list_item=0x7f0a0053;
+        public static final int lvExp=0x7f0a000f;
         public static final int menu=0x7f0a000d;
         public static final int nutritionChartFragment=0x7f0a000e;
         public static final int nutritionTableFragment=0x7f0a000a;
-        public static final int nutrition_table=0x7f0a0017;
-        public static final int piechart=0x7f0a0012;
-        public static final int piechart_table=0x7f0a0013;
-        public static final int potassium_goal=0x7f0a002e;
-        public static final int potassium_left=0x7f0a002f;
-        public static final int potassium_table=0x7f0a002c;
-        public static final int potassium_total=0x7f0a002d;
-        public static final int protein_goal=0x7f0a003e;
-        public static final int protein_left=0x7f0a003f;
-        public static final int protein_percentage=0x7f0a0016;
-        public static final int protein_table=0x7f0a003c;
-        public static final int protein_total=0x7f0a003d;
-        public static final int saturated_fat_goal=0x7f0a001e;
-        public static final int saturated_fat_left=0x7f0a001f;
-        public static final int saturated_fat_table=0x7f0a001c;
-        public static final int saturated_fat_total=0x7f0a001d;
-        public static final int sodium_goal=0x7f0a002a;
-        public static final int sodium_left=0x7f0a002b;
-        public static final int sodium_table=0x7f0a0028;
-        public static final int sodium_total=0x7f0a0029;
-        public static final int sugar_goal=0x7f0a003a;
-        public static final int sugar_left=0x7f0a003b;
-        public static final int sugar_table=0x7f0a0038;
-        public static final int sugar_total=0x7f0a0039;
+        public static final int nutrition_table=0x7f0a001a;
+        public static final int piechart=0x7f0a0015;
+        public static final int piechart_table=0x7f0a0016;
+        public static final int potassium_goal=0x7f0a0031;
+        public static final int potassium_left=0x7f0a0032;
+        public static final int potassium_table=0x7f0a002f;
+        public static final int potassium_total=0x7f0a0030;
+        public static final int protein_goal=0x7f0a0041;
+        public static final int protein_left=0x7f0a0042;
+        public static final int protein_percentage=0x7f0a0019;
+        public static final int protein_table=0x7f0a003f;
+        public static final int protein_total=0x7f0a0040;
+        public static final int saturated_fat_goal=0x7f0a0021;
+        public static final int saturated_fat_left=0x7f0a0022;
+        public static final int saturated_fat_table=0x7f0a001f;
+        public static final int saturated_fat_total=0x7f0a0020;
+        public static final int sodium_goal=0x7f0a002d;
+        public static final int sodium_left=0x7f0a002e;
+        public static final int sodium_table=0x7f0a002b;
+        public static final int sodium_total=0x7f0a002c;
+        public static final int sugar_goal=0x7f0a003d;
+        public static final int sugar_left=0x7f0a003e;
+        public static final int sugar_table=0x7f0a003b;
+        public static final int sugar_total=0x7f0a003c;
         public static final int summary=0x7f0a0009;
-        public static final int trans_fat_goal=0x7f0a0022;
-        public static final int trans_fat_left=0x7f0a0023;
-        public static final int trans_fat_table=0x7f0a0020;
-        public static final int trans_fat_total=0x7f0a0021;
-        public static final int vit_A_goal=0x7f0a0042;
-        public static final int vit_A_left=0x7f0a0043;
-        public static final int vit_A_table=0x7f0a0040;
-        public static final int vit_A_total=0x7f0a0041;
-        public static final int vit_C_goal=0x7f0a0046;
-        public static final int vit_C_left=0x7f0a0047;
-        public static final int vit_C_table=0x7f0a0044;
-        public static final int vit_C_total=0x7f0a0045;
+        public static final int trans_fat_goal=0x7f0a0025;
+        public static final int trans_fat_left=0x7f0a0026;
+        public static final int trans_fat_table=0x7f0a0023;
+        public static final int trans_fat_total=0x7f0a0024;
+        public static final int vit_A_goal=0x7f0a0045;
+        public static final int vit_A_left=0x7f0a0046;
+        public static final int vit_A_table=0x7f0a0043;
+        public static final int vit_A_total=0x7f0a0044;
+        public static final int vit_C_goal=0x7f0a0049;
+        public static final int vit_C_left=0x7f0a004a;
+        public static final int vit_C_table=0x7f0a0047;
+        public static final int vit_C_total=0x7f0a0048;
     }
     public static final class layout {
         public static final int activity_home_page=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_nutrition_page=0x7f030002;
-        public static final int drawer_list_item=0x7f030003;
-        public static final int fragment_add_entry=0x7f030004;
-        public static final int fragment_home_page=0x7f030005;
-        public static final int fragment_nutrition_chart=0x7f030006;
-        public static final int fragment_nutrition_table=0x7f030007;
-        public static final int list_item=0x7f030008;
-        public static final int nutrition_table_row=0x7f030009;
+        public static final int add_entry_list=0x7f030003;
+        public static final int add_entry_list_group=0x7f030004;
+        public static final int add_entry_list_item=0x7f030005;
+        public static final int drawer_list_item=0x7f030006;
+        public static final int fragment_add_entry=0x7f030007;
+        public static final int fragment_home_page=0x7f030008;
+        public static final int fragment_nutrition_chart=0x7f030009;
+        public static final int fragment_nutrition_page=0x7f03000a;
+        public static final int fragment_nutrition_table=0x7f03000b;
+        public static final int list_item=0x7f03000c;
+        public static final int nutrition_table_row=0x7f03000d;
     }
     public static final class menu {
         public static final int home_page=0x7f090000;
@@ -282,18 +304,18 @@ containing a value of this type.
         public static final int nutrition_page=0x7f090002;
     }
     public static final class string {
-        public static final int Carbohydrates=0x7f060032;
-        public static final int Fat=0x7f060033;
-        public static final int Protein=0x7f060034;
+        public static final int Carbohydrates=0x7f060031;
+        public static final int Fat=0x7f060032;
+        public static final int Protein=0x7f060033;
         public static final int action_settings=0x7f060001;
         public static final int add_to_diary=0x7f060005;
         public static final int app_name=0x7f060000;
         public static final int breakfast=0x7f060024;
         public static final int calcium=0x7f06001e;
-        public static final int calorie_breakdown=0x7f060031;
+        public static final int calorie_breakdown=0x7f060030;
         public static final int calories_remaining=0x7f060004;
         public static final int calories_remaining_number=0x7f060003;
-        public static final int carbs_goal=0x7f060035;
+        public static final int carbs_goal=0x7f060034;
         public static final int cardiovascular=0x7f060028;
         public static final int cholesterol=0x7f060015;
         public static final int daily_summary=0x7f060011;
@@ -307,7 +329,7 @@ containing a value of this type.
         public static final int drawer_open=0x7f06002e;
         public static final int exercise_calorie_number=0x7f060008;
         public static final int exercise_notes=0x7f06002c;
-        public static final int fat_goal=0x7f060036;
+        public static final int fat_goal=0x7f060035;
         public static final int fiber=0x7f060019;
         public static final int food_calorie_number=0x7f060007;
         public static final int food_notes=0x7f06002b;
@@ -321,13 +343,12 @@ containing a value of this type.
         public static final int notes=0x7f060023;
         public static final int potassium=0x7f060017;
         public static final int protein=0x7f06001b;
-        public static final int protein_goal=0x7f060037;
+        public static final int protein_goal=0x7f060036;
         public static final int saturated_fat=0x7f060013;
         public static final int snacks=0x7f060027;
         public static final int sodium=0x7f060016;
         public static final int strength=0x7f060029;
         public static final int sugar=0x7f06001a;
-        public static final int title_activity_nutrition_page=0x7f060030;
         public static final int total=0x7f06000f;
         public static final int total_carbs=0x7f060018;
         public static final int total_fat=0x7f060012;
