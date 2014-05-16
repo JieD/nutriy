@@ -4,7 +4,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+import sfsu.csc780.jied.nutriy.HomePageFragment.OnAddEntryClickListener;
 import sfsu.csc780.jied.nutriy.adapter.ExpandableListAdapter;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,6 +17,7 @@ import android.widget.ExpandableListView;
 public class AddEntryFragment extends Fragment {
 	
 	private View rootView;
+	OnAddClickListener mCallback;
 	ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
@@ -36,7 +39,7 @@ public class AddEntryFragment extends Fragment {
     	super.onActivityCreated(savedInstanceState);
     	
     	setUpExpListView();
-        //setUpListeners(); 
+        setUpClickListener(); 
 	}
 	
 	private void setUpExpListView() {
@@ -74,6 +77,35 @@ public class AddEntryFragment extends Fragment {
         } 
 	}
 	
-	private void setUpListeners() {
+	private void setUpClickListener() {
+		// Listview on child click listener
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+ 
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                    int groupPosition, int childPosition, long id) {
+            	mCallback.onAddClick();
+                return true;
+            }
+        });
 	}
+	
+	// Container Activity must implement this interface
+    public interface OnAddClickListener {
+        public void onAddClick();
+    }
+    
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception
+        try {
+            mCallback = (OnAddClickListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnAddEntryClickListener");
+        }
+    }
 }

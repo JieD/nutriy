@@ -35,10 +35,10 @@
     <string name="calcium">Calcium</string>
     <string name="iron">Iron</string>
     <string name="default_number">0</string>
+    
     <string name="meals">MEALS</string>
     <string name="water_upcase">WATER</string>
-    <string name="notes">NOTES</string>
-    
+    <string name="notes">NOTES</string>    
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
     <string name="dinner">Dinner</string>
@@ -117,5 +117,6 @@
     <string name="fat_goal">30 %</string>
     <string name="protein_goal">20 %</string>
     
-
+	<string name="item_hint">Search for an Item</string>
+	<string name="search_results">SEARCH RESULTS</string>
 </resources>

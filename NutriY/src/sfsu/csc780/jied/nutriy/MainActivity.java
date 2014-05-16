@@ -31,7 +31,8 @@ import android.widget.ListView;
  * 4. Creating and displaying fragment activities on selecting list item.
  */
 public class MainActivity extends FragmentActivity 
-	implements HomePageFragment.OnAddEntryClickListener {
+	implements HomePageFragment.OnAddEntryClickListener,  
+	AddEntryFragment.OnAddClickListener {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -260,5 +261,11 @@ public class MainActivity extends FragmentActivity
 	    	// Commit the transaction
 	    	transaction.commit();
 		}
+	}
+
+	@Override
+	public void onAddClick() {
+		Fragment addFragment = new AddFragment();
+    	replaceFragment(addFragment);		
 	}
 }

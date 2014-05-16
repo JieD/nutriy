@@ -52,4 +52,5 @@ Log File
      Convert AddEntry layout to be ExpandableListView to enable grouping and division 
 5/15 Successfully use ExpandableListView with custom ExpandableListAdapter, expande by default and hide group indicators
      Add click listeners
-
+     Work on AddFragment
+5/16 Clean data from USDA with appropriate unit, format and sequence

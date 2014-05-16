@@ -7,6 +7,7 @@
 	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
 	<item value="3" key="CallHierarchyViewPart.orientation"/>
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="filter_imports;" key="filters_last_used"/>
 	<item value="500" key="CallHierarchyViewPart.ratio1"/>
 	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
 	<item value="500" key="CallHierarchyViewPart.ratio3"/>
@@ -18,9 +19,9 @@
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="false" key="updateQualifiedNames"/>
 		<item value="*" key="patterns"/>
-		<item value="false" key="updateSimilarElements"/>
-		<item value="1" key="updateSimilarElementsMatchStrategy"/>
-		<item value="false" key="updateTextualMatches"/>
+		<item value="true" key="updateSimilarElements"/>
+		<item value="2" key="updateSimilarElementsMatchStrategy"/>
+		<item value="true" key="updateTextualMatches"/>
 	</section>
 	<section name="SearchInDialog">
 		<item value="true" key="SearchInProjects"/>
@@ -55,11 +56,29 @@
 		<item value="false" key="FinalModifier"/>
 	</section>
 	<section name="RenameInformationPopup">
+		<item value="2" key="snap_position"/>
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
+	</section>
+	<section name="JavaSearchPage">
+		<item value="1" key="HISTORY_SIZE"/>
+		<item value="false" key="CASE_SENSITIVE"/>
+		<item value="11" key="INCLUDE_MASK"/>
+		<section name="HISTORY0">
+			<item value="false" key="isCaseSensitive"/>
+			<item value="" key="javaElement"/>
+			<item value="0" key="scope"/>
+			<item value="11" key="includeMask"/>
+			<item value="list_selector" key="pattern"/>
+			<item value="2" key="limitTo"/>
+			<item value="0" key="matchLocations"/>
+			<item value="0" key="searchFor"/>
+			<list key="workingSets">
+			</list>
+		</section>
 	</section>
 	<section name="completion_proposal_size">
 	</section>
