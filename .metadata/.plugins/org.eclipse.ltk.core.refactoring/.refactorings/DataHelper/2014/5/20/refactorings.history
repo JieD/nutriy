@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;nutrition_db.txt&apos; to &apos;assets&apos;&#x0A;- Original project: &apos;DataHelper&apos;&#x0A;- Destination element: &apos;assets&apos;&#x0A;- Original element: &apos;nutrition_db.txt&apos;&#x0A;- Update references to refactored element" description="Move file" element1="nutrition_data/nutrition_db.txt" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1400357480891" target="/NutriY/assets" units="0" version="1.0"/>
+</session>

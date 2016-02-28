@@ -7,3 +7,9 @@
 1399921054483	Rename resource 'navigation_drawer.xml'
 1400187538718	Delete element
 1400187557390	Delete element
+1400283897460	Rename type 'NutritionValue'
+1400357625034	Rename package 'sfsu.csc780.jied.nutriy.handler'
+1400357646584	Move compilation unit
+1400357697359	Rename package 'sfsu.csc780.jied.nutriy.db.handler'
+1400357731310	Move compilation unit
+1400358545694	Copy file

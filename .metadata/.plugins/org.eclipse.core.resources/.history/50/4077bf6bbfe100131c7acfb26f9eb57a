@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<TextView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lblListItem"
+    android:layout_width="match_parent" 
+    android:minHeight="@dimen/large_entry_height"
+    android:gravity="center_vertical"
+    android:textSize="@dimen/medium_large_text_size"
+    android:paddingLeft="@dimen/large_padding"/>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/diary_item_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/large_entry_height" >
+
+    <TextView 
+	    android:id="@+id/diary_item_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="center_vertical"	     
+	    android:paddingLeft="@dimen/extra_large_padding"
+	    android:textSize="@dimen/medium_text_size"
+	    android:textStyle="bold" />
+</LinearLayout>
+

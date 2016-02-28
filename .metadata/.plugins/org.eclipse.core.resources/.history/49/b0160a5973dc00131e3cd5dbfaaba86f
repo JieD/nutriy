@@ -1,7 +1,0 @@
-package sfsu.csc780.jied.nutriy;
-
-import android.support.v4.app.Fragment;
-
-public class AddFragment extends Fragment {
-	
-}
