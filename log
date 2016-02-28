@@ -5,9 +5,9 @@ Log File
 3/6  finish design document and create Google Code page
 3/16 HomePageActivity
 3/17 refine activity_home_page.xml:choose color and fonts
-3/18 refind activity_home_page.xml:rounded button shape, layout divider
-3/19 refind activity_home_page.xml:layout - learn details about listView
-3/20 refind activity_home_page.xml:layout - use one RelativeLayout insteandof layered LayoutManagers, refine layout.
+3/18 refine activity_home_page.xml:rounded button shape, layout divider
+3/19 refine activity_home_page.xml:layout - learn details about listView
+3/20 refine activity_home_page.xml:layout - use one RelativeLayout instead of layered LayoutManagers, refine layout.
 3/23 finish refining activity_home_page.xml
 3/25 USDA database usage
 3/27 USDA abbreviated db text file parsing
@@ -39,18 +39,24 @@ Log File
 4/23 Custom View - NutritionChartFragment
 4/24 Custom View - PieChart, color, TypedArray, custom attributes
 5/8  Custom View - improve color, add table, redesign the code for better structure, try to add gap between pie slices
-5/9  Custom View - mathematical model for calcuation offset of each slice according to its percentage (startAngle & endAngle)
-5/10 Custom View - resconstruct code, create Slice class to encapsulate properties - practise DRY, better understanding of custom view and how to dynamically change properties
-5/11 MainAcitivity - add NavigationDrawer for each Activity. 
-     Reconstruct - MainAcitivity has Navigation Drawer, other existing Activity convers into Fragment.
+5/9  Custom View - mathematical model for calculation offset of each slice according to its percentage (startAngle & endAngle)
+5/10 Custom View - reconstruct code, create Slice class to encapsulate properties - practice DRY, better understanding of custom view and how to dynamically change properties
+5/11 MainActivity - add NavigationDrawer for each Activity. 
+     Reconstruct - MainActivity has Navigation Drawer, other existing Activity converts into Fragment.
      Use selector to enable only one item selected. 
-     Create customed ListViewAdapter & ListViewItem
+     Create costumed ListViewAdapter & ListViewItem
 5/12 Convert Activity to Fragment, add proper comments.
 5/14 Convert Activity to Fragment, add proper comments.
      Avoid invoking fragments from fragment. All transaction is done inside an Activity
-     Enable button click programmaticlly due to XML way only works for Acitivity
+     Enable button click programmatically due to XML way only works for Activity
      Convert AddEntry layout to be ExpandableListView to enable grouping and division 
-5/15 Successfully use ExpandableListView with custom ExpandableListAdapter, expande by default and hide group indicators
+5/15 Successfully use ExpandableListView with custom ExpandableListAdapter, expanded by default and hide group indicators
      Add click listeners
      Work on AddFragment
 5/16 Clean data from USDA with appropriate unit, format and sequence
+5/17 Create Nutrition and DatabaseHandler to populate the nutritions db
+     Use beginTransaction() to speed up db rows insertion 
+5/18 Use SQLiteStatement to speed up db rows insertion
+     Read up existing code to better understand
+     Fix CRUD errors
+     Find way to look into Database Schema & Content - Emulator & SQLite Browser

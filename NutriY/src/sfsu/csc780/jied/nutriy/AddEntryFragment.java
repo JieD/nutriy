@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-import sfsu.csc780.jied.nutriy.HomePageFragment.OnAddEntryClickListener;
 import sfsu.csc780.jied.nutriy.adapter.ExpandableListAdapter;
 import android.app.Activity;
 import android.os.Bundle;
@@ -16,12 +15,15 @@ import android.widget.ExpandableListView;
 
 public class AddEntryFragment extends Fragment {
 	
+	private String mTitle = "Add Entry";
 	private View rootView;
 	OnAddClickListener mCallback;
 	ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
+    final int[] array_ids = {R.array.meal_child_array, R.array.exercise_child_array, 
+			R.array.water_child_array, R.array.note_child_array};
 	
 	public AddEntryFragment() {}
 	
@@ -37,7 +39,7 @@ public class AddEntryFragment extends Fragment {
 	@Override
     public void onActivityCreated(Bundle savedInstanceState) {
     	super.onActivityCreated(savedInstanceState);
-    	
+    	getActivity().setTitle(mTitle);
     	setUpExpListView();
         setUpClickListener(); 
 	}
@@ -60,10 +62,7 @@ public class AddEntryFragment extends Fragment {
         	expListView.expandGroup(position);
 	}
 	
-	private void prepareListData() {
-		final int[] array_ids = {R.array.meal_child_array, R.array.exercise_child_array, 
-				R.array.water_child_array, R.array.note_child_array};
-		
+	private void prepareListData() {		
 		// load add entry list header titles
 		String[] itemHeaders = getResources().getStringArray(R.array.add_entry_list_header_array);
         listDataHeader = Arrays.asList(itemHeaders);
@@ -84,15 +83,20 @@ public class AddEntryFragment extends Fragment {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                     int groupPosition, int childPosition, long id) {
-            	mCallback.onAddClick();
+            	mCallback.onAddClick(getCategory(groupPosition, childPosition));
                 return true;
             }
         });
 	}
 	
+	private String getCategory(int groupPosition, int childPosition) {
+		String[] children = getResources().getStringArray(array_ids[groupPosition]);
+		return children[childPosition];
+	}
+	
 	// Container Activity must implement this interface
     public interface OnAddClickListener {
-        public void onAddClick();
+        public void onAddClick(String category);
     }
     
     @Override

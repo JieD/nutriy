@@ -3,6 +3,10 @@
 
     <string name="app_name">NutriY</string>
     <string name="action_settings">Settings</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_new">New</string>
+    <string name="action_delete">Delete</string>
     
     <string name="date">Today</string>
     <string name="calories_remaining_number">1200</string>
@@ -19,9 +23,15 @@
     <string name="goal">Goal</string>
     <string name="total">Total</string>
     <string name="left">Left</string>
+    <string name="food">Food</string>
+    <string name="exercise">Exercise</string>
+    <string name="net">Net</string>
+    <string name="remaining">Remaining</string>
     <string name="daily_summary">DAILY SUMMARY</string>
     <string name="total_fat">Total Fat (g)</string>
     <string name="saturated_fat">Saturated (g)</string>
+    <string name="polyunsaturated_fat">Polyunsaturated (g)</string>
+    <string name="monounsaturated_fat">Monounsaturated (g)</string>
     <string name="trans_fat">Trans (g)</string>
     <string name="cholesterol">Cholesterol (mg)</string>
     <string name="sodium">Sodium (mg)</string>
@@ -105,6 +115,7 @@
     
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
+    <string name="diary_category_settings_icon">Settings Icon</string>
 
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
@@ -119,4 +130,17 @@
     
 	<string name="item_hint">Search for an Item</string>
 	<string name="search_results">SEARCH RESULTS</string>
+	<string name="number_of_servings">Number of Servings</string>
+	<string name="serving_size">Serving Size</string>
+	
+	<string name="nutritional_facts">NUTRITIONAL FACTS</string>
+	<string name="calories">Calories</string>
+	
+	<!-- Diary Item List Headers -->
+    <string-array name="diary_item_list_header_array">
+        <item>BREAKFAST</item>
+        <item>LUNCH</item>
+        <item>DINNER</item>
+        <item>SNACKS</item>
+    </string-array>
 </resources>

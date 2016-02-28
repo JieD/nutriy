@@ -64,21 +64,21 @@
 	            <TableRow 
 	                android:divider="@drawable/table_divider" android:showDividers="middle">
 	                              
-	                <TextView                   
+	                <TextView           
+	                    android:id="@+id/calorie_goal_number"        
 	                    android:layout_weight="1" android:paddingLeft="@dimen/medium_padding"
-	                    android:text="@string/goal_calorie_number" 
 	                    android:textSize="@dimen/large_text_size" android:textStyle="bold" />
-	                <TextView                     
+	                <TextView               
+	                    android:id="@+id/calorie_food_number"      
 	                    android:layout_weight="1" android:paddingLeft="@dimen/medium_padding"
-	                    android:text="@string/food_calorie_number" 
 	                    android:textSize="@dimen/large_text_size" android:textStyle="bold" />
-	                <TextView                    
-	                    android:layout_weight="1" android:paddingLeft="@dimen/medium_padding"
-	                    android:text="@string/exercise_calorie_number" 
+	                <TextView  
+	                    android:id="@+id/calorie_exercise_number"                  
+	                    android:layout_weight="1" android:paddingLeft="@dimen/medium_padding" 
 	                    android:textSize="@dimen/large_text_size" android:textStyle="bold" />
-	                <TextView                     
-	                    android:layout_weight="1" android:paddingLeft="@dimen/medium_padding"
-	                    android:text="@string/net_calorie_number" 
+	                <TextView      
+	                    android:id="@+id/calorie_net_number"               
+	                    android:layout_weight="1" android:paddingLeft="@dimen/medium_padding" 
 	                    android:textSize="@dimen/large_text_size" android:textStyle="bold" />
 	            </TableRow>
 	                

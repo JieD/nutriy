@@ -183,8 +183,8 @@ public class PieChart extends View {
 
 	public void setmCarbPercentage(int mCarbPercentage) {
 		this.mCarbPercentage = mCarbPercentage;
-	    invalidate();
-	    requestLayout();
+	    // invalidate();
+	    // requestLayout();
 	}
 
 	public double getmFatPercentage() {
@@ -193,8 +193,8 @@ public class PieChart extends View {
 
 	public void setmFatPercentage(int mFatPercentage) {
 		this.mFatPercentage = mFatPercentage;
-		invalidate();
-	    requestLayout();
+		// invalidate();
+	    // requestLayout();
 	}
 
 	public double getmProteinPercentage() {
@@ -203,6 +203,14 @@ public class PieChart extends View {
 
 	public void setmProteinPercentage(int mProteinPercentage) {
 		this.mProteinPercentage = mProteinPercentage;
+		//invalidate();
+	    // requestLayout();
+	}
+	
+	public void setPercentage(int carbsPercentage, int fatPercentage, int proteinPercentage ) {
+		setmCarbPercentage(carbsPercentage);
+	    setmFatPercentage(fatPercentage);
+		setmProteinPercentage(proteinPercentage);
 		invalidate();
 	    requestLayout();
 	}
@@ -298,6 +306,6 @@ public class PieChart extends View {
 
 		public void setmBounds(RectF mBounds) {
 			this.mBounds = mBounds;
-		}
-	}
+		}		
+	}	
 }

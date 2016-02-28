@@ -19,12 +19,8 @@ public class CleanData {
 	private String outputFileName;
 	private final static Charset ENCODING = StandardCharsets.UTF_8;
 	
-	/**
-	  Constructor.
-	  @param inputFileName, String outputFileName full name of an existing, readable file.
-	*/
 	public CleanData(String inputFileName, String outputFileName){
-	  inputFilePath = Paths.get(inputFileName);
+	  this.inputFilePath = Paths.get(inputFileName);
 	  this.outputFileName = outputFileName; 
 	}
 	
@@ -49,15 +45,21 @@ public class CleanData {
 	 *  3. Missing values are denoted by the null value of two consecutive carets (^^) or 
 	 *     two carets and two tildes (~~).
 	 *  Steps to clean raw nutrition_data file:
-	 *  1. remove '^' and '~'
+	 *  1. keep '^' and '~' as field separators
 	 *  2. remove USDA db ID
+	 *  3. extract necessary nutrition data
 	 */
 	public final void clean() throws IOException {
 		Scanner fileScanner =  new Scanner(inputFilePath, ENCODING.name());
 		PrintWriter output = createWriter();		
 		CleanLine lineCleaner = new CleanLine();
+		//int lineN = 1;
+		String line = "";
 	    while (fileScanner.hasNextLine()){
-	      output.println(lineCleaner.clean((fileScanner.nextLine())));
+	      //log(lineN);
+	      line = lineCleaner.clean((fileScanner.nextLine()));
+	      if (line != "") output.println(line);
+	      //lineN++;
 	    }      
 	    fileScanner.close();
 	    output.flush();

@@ -5,6 +5,7 @@
     android:layout_height="wrap_content" 
     android:background="@color/low_light_gray" >
     
+    <!-- Table Header -->
     <TableRow 
         android:layout_width="match_parent" 
         android:minHeight="@dimen/medium_entry_height"
@@ -24,9 +25,10 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- total fat row -->
     <TableRow 
-        android:id="@+id/fat_table"
-        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">       
+        android:layout_width="match_parent" 
+        android:minHeight="@dimen/table_entry_height">       
         <TextView  
             android:layout_weight="2" android:text="@string/total_fat" 
             android:textSize="@dimen/small_text_size" android:textStyle="bold"
@@ -49,9 +51,10 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- saturated fat row -->
     <TableRow 
-        android:id="@+id/saturated_fat_table"
-        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
+        android:layout_width="match_parent" 
+        android:minHeight="@dimen/table_entry_height"
         android:background="@color/mid_light_gray">        
         <TextView android:layout_weight="2" android:text="@string/saturated_fat" 
             android:textSize="@dimen/small_text_size" 
@@ -74,7 +77,57 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- polyunsaturated fat row -->
     <TableRow 
+        android:layout_width="match_parent" 
+        android:minHeight="@dimen/table_entry_height" >        
+        <TextView android:layout_weight="2" android:text="@string/polyunsaturated_fat" 
+            android:textSize="@dimen/small_text_size" 
+            android:paddingLeft="@dimen/extra_large_padding" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/polyunsaturated_fat_total"
+            android:layout_weight="1" android:text="@string/default_number"
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/polyunsaturated_fat_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/polyunsaturated_fat_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <!-- monounsaturated fat row -->
+    <TableRow 
+        android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
+        android:background="@color/mid_light_gray">        
+        <TextView android:layout_weight="2" android:text="@string/monounsaturated_fat" 
+            android:textSize="@dimen/small_text_size" 
+            android:paddingLeft="@dimen/extra_large_padding" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/monounsaturated_fat_total"
+            android:layout_weight="1" android:text="@string/default_number"
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/monounsaturated_fat_goal"
+            android:layout_weight="1" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+        <TextView 
+            android:id="@+id/monounsaturated_fat_left"
+            android:layout_weight="1" android:text="@string/default_number" 
+            android:textSize="@dimen/small_text_size" 
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+    
+    <!-- TableRow 
         android:id="@+id/trans_fat_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
         
@@ -97,10 +150,10 @@
             android:layout_weight="1" android:text="@string/default_number" 
             android:textSize="@dimen/small_text_size" 
             android:layout_gravity="center_vertical" />
-    </TableRow>
+    </TableRow -->
     
+    <!-- cholesterol row -->
     <TableRow 
-        android:id="@+id/cholesterol_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
         android:background="@color/mid_light_gray">
         
@@ -126,8 +179,8 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- sodium row -->
     <TableRow 
-        android:id="@+id/sodium_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
         
         <TextView 
@@ -152,8 +205,8 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- potassium row -->
     <TableRow 
-        android:id="@+id/potassium_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
         android:background="@color/mid_light_gray">
         
@@ -179,8 +232,8 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- total carbs row -->
     <TableRow 
-        android:id="@+id/carbs_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
         
         <TextView 
@@ -205,8 +258,8 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- fiber row -->
     <TableRow 
-        android:id="@+id/fiber_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
         android:background="@color/mid_light_gray">
         
@@ -231,8 +284,8 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- sugar row -->
     <TableRow 
-        android:id="@+id/sugar_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
         
         <TextView android:layout_weight="2" android:text="@string/sugar" 
@@ -256,8 +309,8 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- protein row -->
     <TableRow 
-        android:id="@+id/protein_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
         android:background="@color/mid_light_gray">
         
@@ -283,8 +336,8 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- vit_A row -->
     <TableRow 
-        android:id="@+id/vit_A_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
         
         <TextView 
@@ -309,8 +362,8 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- vit_C row -->
     <TableRow 
-        android:id="@+id/vit_C_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
         android:background="@color/mid_light_gray">
         
@@ -336,8 +389,8 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- calcium row -->
     <TableRow 
-        android:id="@+id/calcium_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height">
         
         <TextView 
@@ -362,8 +415,8 @@
             android:layout_gravity="center_vertical" />
     </TableRow>
     
+    <!-- iron row -->
     <TableRow 
-        android:id="@+id/iron_table"
         android:layout_width="match_parent" android:minHeight="@dimen/table_entry_height"
         android:background="@color/mid_light_gray">
         

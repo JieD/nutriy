@@ -1,12 +1,21 @@
 package sfsu.csc780.jied.nutriy;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 import sfsu.csc780.jied.nutriy.adapter.NavDrawerListAdapter;
+import sfsu.csc780.jied.nutriy.db.handler.DatabaseHandler;
+import sfsu.csc780.jied.nutriy.db.helper.ParseFile;
+import sfsu.csc780.jied.nutriy.model.DiaryItem;
 import sfsu.csc780.jied.nutriy.model.NavDrawerItem;
+import sfsu.csc780.jied.nutriy.model.Nutrition;
+import android.app.ActionBar;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
@@ -32,12 +41,17 @@ import android.widget.ListView;
  */
 public class MainActivity extends FragmentActivity 
 	implements HomePageFragment.OnAddEntryClickListener,  
-	AddEntryFragment.OnAddClickListener {
+	AddEntryFragment.OnAddClickListener, AddFragment.OnSelectClickListener,
+	EditFragment.OnAddToDiaryClickListener,
+	DiaryPageFragment.OnEditClickListener,
+	DiaryPageFragment.OnEditActionListener,
+	DiaryPageFragment.OnAddActionListener,
+	DiaryPageFragment.OnDeleteActionListener {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
- 
-    // nav drawer title
+
+	// nav drawer title
     private CharSequence mDrawerTitle;
  
     // used to store app title
@@ -50,18 +64,89 @@ public class MainActivity extends FragmentActivity
     private ArrayList<NavDrawerItem> navDrawerItems;
     
     private Bundle mSavedInstanceState;
+    
+    private DatabaseHandler db;
  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mSavedInstanceState = savedInstanceState;
+        mSavedInstanceState = savedInstanceState;       
         setContentView(R.layout.activity_main);   
         initNavigationDrawer();
         
         // on first time display view for first nav item
         if (mSavedInstanceState == null) {          
             selectItem(0);
-        }
+        }        
+        
+        db = new DatabaseHandler(this);
+        File database = getApplicationContext().getDatabasePath(DatabaseHandler.NUTRITION_DATABASE);
+
+        if (!database.exists()) {
+            // Database does not exist so copy it from assets here
+            Log.i("Database", "Not Found");    
+            
+            /**
+             * CRUD Operations
+             */
+            // Inserting Nutritions
+            Log.d("Insert: ", "Inserting .."); 
+            
+            ParseFile pf = new ParseFile(this); 
+            db.addNutritionList(pf.getNutritionList());
+                       
+            // Reading Nutritions
+            Log.d("Reading: ", "Reading some Nutritions.."); 
+
+            int[] ids = {1, 100, 200, 300};                 
+            for (int id: ids) {
+            	Nutrition nutrition = db.getNutrition(id);
+            	Log.d("id:", String.valueOf(nutrition.getId()));
+                Nutrition.log(nutrition.getNutritionMap());
+            } 
+            
+        } else {
+            Log.i("Database", "Found");     
+            
+            /** SQLiteDatabase sqldb = db.getWritableDatabase();	
+            db.onUpgrade(sqldb, 1, 1); */
+            
+            // update database
+            /** Log.d("Delete: ", "Deleting .."); 
+  			// need to add delete method
+            ParseFile pf = new ParseFile(this); 
+            db.addNutritionList(pf.getNutritionList()); */
+            
+         // Test database DiaryItems
+            /** Log.d("Delete: ", "Deleting .."); 
+            List<DiaryItem> items = db.getAllDiaryItems(); 
+            for (DiaryItem di : items) {
+                db.deleteDiaryItem(di);
+            } */
+                 
+            // Inserting Contacts
+            /** Log.d("Insert: ", "Inserting .."); 
+            db.addDiaryItem(new DiaryItem("CAMPBELL'S BRN SUGAR&BACON FLAV BKD BNS", 1.0, 150, "LUNCH"));        
+            db.addDiaryItem(new DiaryItem("VITASOY USA,NASOYA LITE FIRM TOFU", 2.0, 100, "LUNCH"));
+            db.addDiaryItem(new DiaryItem("SOYMILK (ALL FLAVORS),UNSWTND,W/ ADDED CA,VITAMINS A & D", 0.5, 120, "BREAKFAST"));
+            db.addDiaryItem(new DiaryItem("LAMB,DOM,COMP OF RTL CUTS,LN&FAT,1/8\"FAT,CHOIC,RAW", 0.2, 300, "DINNER")); 
+             
+            List<DiaryItem> items = db.searchDiaryItemByCategoty("LUNCH");
+            // Reading all contacts
+            /** Log.d("Reading: ", "Reading all diary item.."); 
+            items = db.getAllDiaryItems();      
+             
+            for (DiaryItem di : items) {
+                String log = "Id: "+di.getId()+" ,Name: " + di.getName() + " ,Number of Servings: " 
+                		+ di.getNumberOfServings() + " ,Calorie: " + di.getCalorie() 
+                		+ " ,Category: " + di.getCategory();
+                // Writing Contacts to log
+                Log.d("Name: ", log);
+            }  */          
+            
+        }   
+        
+        
     }
     
     private void initNavigationDrawer() {
@@ -121,7 +206,7 @@ public class MainActivity extends FragmentActivity
 	            fragment = new HomePageFragment();
 	            break;
 	        case 1:
-	            //fragment = new DiaryPageFragment();
+	            fragment = new DiaryPageFragment();
 	            break;
 	        case 2:
 	            fragment = new NutritionPageFragment();
@@ -241,6 +326,10 @@ public class MainActivity extends FragmentActivity
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
+    /**
+     *  on HomePage, user clicks 'Add to Diary' button
+     *  go to AddEntryFragment
+     */
 	@Override
 	public void onAddEntryClick() {		
     	Fragment addEntryFragment = new AddEntryFragment();
@@ -263,9 +352,74 @@ public class MainActivity extends FragmentActivity
 		}
 	}
 
+	/**
+	 * on AddEntryFragment, user clicks a specific entry to add item
+	 * go to AddFragment, pass the entry name along
+	 */
 	@Override
-	public void onAddClick() {
+	public void onAddClick(String category) {
 		Fragment addFragment = new AddFragment();
+		Bundle args = new Bundle();
+		args.putString("title", category);
+		addFragment.setArguments(args);
     	replaceFragment(addFragment);		
+	}
+	
+	public DatabaseHandler getDb() {
+		return db;
+	}
+
+	public void setDb(DatabaseHandler db) {
+		this.db = db;
+	}
+
+	/**
+	 * on AddFragment, user selects a specific item to add to the diary
+	 * go to EditFragment, pass the selected item name and category along
+	 */
+	@Override
+	public void onSelectClick(String name, String category) {
+		Fragment editFragment = new EditFragment();
+		Bundle args = new Bundle();
+		args.putString("name", name);
+		args.putString("category", category);
+        editFragment.setArguments(args);
+		replaceFragment(editFragment);		
+	}
+
+	@Override
+	public void OnAddToDiaryClick() {
+		Fragment diary = new DiaryPageFragment();
+		replaceFragment(diary);		
+	}
+
+	@Override
+	public void onEditClick(DiaryItem item) {
+		Fragment editFragment = new EditFragment();
+		Bundle args = new Bundle();
+		args.putString("name", item.getName());
+		// currently not enable edit number of servings
+		//args.putString("numberOfServings", String.valueOf(item.getNumberOfServings()));
+		args.putString("category", item.getCategory());
+        editFragment.setArguments(args);
+		replaceFragment(editFragment); 		
+	}
+
+	@Override
+	public void onAddAction() {
+		onAddEntryClick();		
+	}
+
+	@Override
+	public void onEditAction() {
+		DiaryPageFragment diary = new DiaryPageFragment();
+		diary.enableEditMode();
+		replaceFragment(diary);	
+	}
+
+	@Override
+	public void onDeleteAction() {
+		Fragment diary = new DiaryPageFragment();
+		replaceFragment(diary);			
 	}
 }

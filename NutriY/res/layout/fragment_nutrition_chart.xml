@@ -63,7 +63,7 @@
              <TextView   
                  android:id="@+id/carb_percentage"                 
                  android:layout_weight="2" android:layout_gravity="center_vertical"
-                 android:paddingLeft="@dimen/small_padding" android:text="" 
+                 android:paddingLeft="@dimen/small_padding"
                  android:textSize="@dimen/medium_text_size" />
              <TextView                     
                  android:layout_weight="2" android:layout_gravity="center_vertical"
@@ -83,7 +83,7 @@
              <TextView   
                  android:id="@+id/fat_percentage"                 
                  android:layout_weight="2" android:layout_gravity="center_vertical"
-                 android:paddingLeft="@dimen/small_padding" android:text="" 
+                 android:paddingLeft="@dimen/small_padding"
                  android:textSize="@dimen/medium_text_size" />
              <TextView                     
                  android:layout_weight="2" android:layout_gravity="center_vertical"
@@ -103,7 +103,7 @@
              <TextView   
                  android:id="@+id/protein_percentage"                 
                  android:layout_weight="2" android:layout_gravity="center_vertical"
-                 android:paddingLeft="@dimen/small_padding" android:text="" 
+                 android:paddingLeft="@dimen/small_padding"
                  android:textSize="@dimen/medium_text_size" />
              <TextView                     
                  android:layout_weight="2" android:layout_gravity="center_vertical"

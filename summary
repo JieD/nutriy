@@ -5,3 +5,11 @@ Summary of what I have learnt about essential Android design principles
 4. ListView - each item if not inside a layout container, its height is not set properly. Need to use minHeight.
 5. Hide ExpandableListView group indicators - android:groupIndicator=@null
 6. ScrollView cannot be combined with ListView
+7. A content provider is only required if you need to share data between multiple applications. For example, the contacts data is used by multiple applications and must be stored in a content provider. If you don't need to share data amongst multiple applications you can use a database directly via SQLiteDatabase.
+8. By default SQLite will evaluate every INSERT / UPDATE statement within a unique transaction. If performing a large number of inserts, it's advisable to wrap your operation in a transactioning a Prepared Statement
+9. Recompiling the SQL statement for every insert doesn't make sense if we using the same SQL over-and-over. Use SQLiteStatement
+10. Check Database Schema and data - through Andoird File Explorer, can only see database created by emulator, also download SQLite Browser/Manager
+11. If using SimpleCursorAdapter, the database table must have _id column.
+12. TextView - text align right, set width="match_parent", gravity="right", textAlignment="gravity"
+13. To change the action bar background, create a custom theme for your activity that overrides the actionBarStyle property. This property points to another style in which you can override the background property to specify a drawable resource for the action bar background.
+14. Use SQLiteOpenHelper.onUpgrade() - Called when the database needs to be upgraded. The implementation should use this method to drop tables, add tables, or do anything else it needs to upgrade to the new schema version.

@@ -6,6 +6,7 @@
     <color name="my_blue">#FF0078BE</color>
     
     <color name="light_blue">#FFE1EEFF</color>
+    <color name="text_blue">#33B5E5</color>
     <color name="low_light_gray">#FFFAFAFA</color>
     <color name="mid_light_gray">#FFEEEEEE</color>
     <color name="text_gray">#FFAAAAAA</color>

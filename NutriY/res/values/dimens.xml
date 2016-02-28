@@ -10,7 +10,6 @@
     <dimen name="medium_padding">8dp</dimen>
     <dimen name="large_padding">10dp</dimen>
     <dimen name="extra_large_padding">12dp</dimen>
-    <dimen name="navigation_item_padding">20dp</dimen>
     
     <dimen name="extra_small_text_size">10sp</dimen>
     <dimen name="small_text_size">12sp</dimen>
@@ -24,5 +23,7 @@
     <dimen name="medium_entry_height">30dp</dimen>
     <dimen name="small_entry_height">25dp</dimen>
     <dimen name="table_entry_height">20dp</dimen>
+    
+    <dimen name="calorie_tag_height">60dp</dimen>
     
 </resources>
