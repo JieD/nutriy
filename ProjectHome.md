@@ -1,0 +1,1 @@
+This is a class term project of Android mobile application.
